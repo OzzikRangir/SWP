@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Swp.Model.Bron>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwabroni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StanBroni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwabroni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StanBroni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.Idzolnierza)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idbroni">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idbroni">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idbroni">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

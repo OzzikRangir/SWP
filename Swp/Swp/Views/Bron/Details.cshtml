@@ -1,0 +1,36 @@
+﻿@model Swp.Model.Bron
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bron</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwabroni)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nazwabroni)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StanBroni)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StanBroni)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdzolnierzaNavigation.Idzolnierza)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Idbroni">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

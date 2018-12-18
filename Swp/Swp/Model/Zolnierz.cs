@@ -25,6 +25,9 @@ namespace Swp.Model
         [Column("IDGRUPY")]
         [StringLength(10)]
         public string Idgrupy { get; set; }
+        [Column("STOPIEN")]
+        [StringLength(20)]
+        public string Stopien { get; set; }
         [Column("IMIE")]
         [StringLength(80)]
         public string Imie { get; set; }
@@ -44,10 +47,7 @@ namespace Swp.Model
         [StringLength(11)]
         public string Pesel { get; set; }
         [Column("NUMERTELEFONU", TypeName = "numeric(9, 0)")]
-        public decimal? Numertelefonu { get; set; }
-        [Column("STOPIEN")]
-        [StringLength(10)]
-        public string Stopien { get; set; }
+        public decimal? Numertelefonu { get; set; }        
 
         [ForeignKey("Idgrupy")]
         [InverseProperty("Zolnierz")]
