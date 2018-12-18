@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Swp.Model
 {
-    public class Enumerations
+    public class Stopnie
     {
-        public static Dictionary<int, string> Stopnie = new Dictionary<int, string>()
+        public static Dictionary<int, string> StopnieSlownik = new Dictionary<int, string>()
         {
 
         {0,"szer." },
