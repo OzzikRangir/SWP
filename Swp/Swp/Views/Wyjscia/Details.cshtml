@@ -1,0 +1,30 @@
+﻿@model Swp.Model.Wyjscie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Wyjscie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RodzajWyjscia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RodzajWyjscia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdzolnierzaNavigation.Idzolnierza)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Idwyjscia">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
