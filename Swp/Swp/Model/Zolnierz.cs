@@ -26,7 +26,6 @@ namespace Swp.Model
         [StringLength(10)]
         public string Idgrupy { get; set; }
         [Column("STOPIEN")]
-        [StringLength(20)]
         public int Stopien { get; set; }
         [Column("IMIE")]
         [StringLength(80)]

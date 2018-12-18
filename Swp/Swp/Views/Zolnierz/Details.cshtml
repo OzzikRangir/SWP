@@ -1,0 +1,72 @@
+﻿@model Swp.Model.Zolnierz
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Zolnierz</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Stopien)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stopien)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Imie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Naziwsko)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Naziwsko)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Imieojca)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imieojca)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Imiematki)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imiematki)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pesel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pesel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numertelefonu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numertelefonu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdgrupyNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdgrupyNavigation.Idgrupy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Idzolnierza">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

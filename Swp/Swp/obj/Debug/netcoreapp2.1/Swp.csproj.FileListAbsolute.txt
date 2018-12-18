@@ -113,4 +113,8 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Swp.Views.pdb
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Swp.dll
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Swp.pdb
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Swp.csproj.CopyComplete
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Swp.csprojAssemblyReference.cache
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zolnierz\Create.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zolnierz\Delete.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zolnierz\Details.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zolnierz\Edit.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zolnierz\Index.g.cshtml.cs
