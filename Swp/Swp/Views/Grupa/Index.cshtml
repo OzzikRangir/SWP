@@ -13,14 +13,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nazwagrupy)
+                Numer grupy
             </th>
-            <th></th>
+            <th>Opis grupy</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idgrupy)
+                        
+                    </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nazwagrupy)
             </td>
