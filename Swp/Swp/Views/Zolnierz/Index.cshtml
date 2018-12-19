@@ -22,18 +22,6 @@
                 @Html.DisplayNameFor(model => model.Naziwsko)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Adres)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imieojca)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imiematki)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pesel)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Numertelefonu)
             </th>
             <th>
@@ -46,25 +34,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @{@Html.DisplayFor(modelItem => item.Stopien)}
+                @Html.DisplayFor(modelItem => item.StopnieSlownik[item.Stopien])
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Imie)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Naziwsko)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adres)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imieojca)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imiematki)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pesel)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Numertelefonu)

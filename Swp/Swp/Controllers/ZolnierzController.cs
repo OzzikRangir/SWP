@@ -18,6 +18,10 @@ namespace Swp.Controllers
             _context = context;
         }
 
+        public async Task<string> GetStopienfromInt(int stopien)
+        {
+            return Enumerations.StopnieSlownik[stopien];
+        }
         // GET: Zolnierz
         public async Task<IActionResult> Index()
         {
@@ -47,6 +51,7 @@ namespace Swp.Controllers
         // GET: Zolnierz/Create
         public IActionResult Create()
         {
+            ViewData["Stopnie"] = new SelectList(Enumerations.StopnieSlownik, "Key", "Value");
             ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy");
             return View();
         }

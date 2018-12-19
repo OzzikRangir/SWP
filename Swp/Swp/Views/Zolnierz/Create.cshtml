@@ -23,8 +23,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Stopien" class="control-label"></label>
-                <input asp-for="Stopien" class="form-control" />
-                <span asp-validation-for="Stopien" class="text-danger"></span>
+                <select asp-for="Stopien" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Stopnie"];"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Imie" class="control-label"></label>

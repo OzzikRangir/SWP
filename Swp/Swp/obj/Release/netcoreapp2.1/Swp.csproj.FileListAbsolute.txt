@@ -65,3 +65,14 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Details.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.csprojAssemblyReference.cache
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Create.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Delete.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Details.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Edit.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Create.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Delete.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Details.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Edit.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Index.g.cshtml.cs

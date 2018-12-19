@@ -20,6 +20,7 @@ namespace Swp.Model
         }
 
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDZOLNIERZA")]
         public int Idzolnierza { get; set; }
         [Column("IDGRUPY")]
@@ -65,5 +66,25 @@ namespace Swp.Model
         public ICollection<Wyjazd> Wyjazd { get; set; }
         [InverseProperty("IdzolnierzaNavigation")]
         public ICollection<Wyjscie> Wyjscie { get; set; }
+
+        public Dictionary<int, string> StopnieSlownik = new Dictionary<int, string>()
+        {
+
+        {0,"szer." },
+        {1,"st. szer." },
+        {2,"kpr." },
+        {3,"st. kpr." },
+        {4,"plut." },
+        {5,"sierż." },
+        {6,"st. sierż." },
+        {7,"mł. chor." },
+        {8,"chor." },
+        {9,"st. chor." },
+        {10,"st. chor. sztab." },
+        {11,"ppor." },
+        {12,"por." },
+        {13,"kpt." },
+
+};
     }
 }
