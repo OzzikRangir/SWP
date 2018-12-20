@@ -44,7 +44,7 @@ namespace Swp.Model
         [StringLength(11)]
         public string Pesel { get; set; }
         [Column("NUMERTELEFONU", TypeName = "numeric(9, 0)")]
-        public decimal? Numertelefonu { get; set; }
+        public int? Numertelefonu { get; set; }
         [Column("STOPIEN")]
         public int Stopien { get; set; }
 
@@ -73,6 +73,17 @@ namespace Swp.Model
             }
             
         }
+
+        [NotMapped]
+        public string StopienString
+        {
+            get
+            {
+                return StopnieSlownik[Stopien];
+            }
+
+        }
+
         public Dictionary<int, string> StopnieSlownik = new Dictionary<int, string>()
         {
 

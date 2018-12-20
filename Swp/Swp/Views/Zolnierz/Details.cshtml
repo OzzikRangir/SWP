@@ -7,41 +7,41 @@
 <h2>Dane osobowe</h2>
 
 <div>
-    <h4>@Html.DisplayFor(model.StopnieSlownik[model2 => model2.Stopien]) @Html.DisplayFor(model => model.Imie) @Html.DisplayFor(model => model.Nazwisko)</h4>
+    <h4>@Html.DisplayFor(model => model.StopienString) @Html.DisplayFor(model => model.Imie) @Html.DisplayFor(model => model.Nazwisko)</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Adres)
+            Adres zameldowania
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Adres)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Imieojca)
+            Imię ojca
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Imieojca)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Imiematki)
+            Imię matki
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Imiematki)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Pesel)
+            PESEL
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Pesel)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Numertelefonu)
+            Nr telefonu
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Numertelefonu)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.IdgrupyNavigation)
+            Grupa
         </dt>
         <dd>
             @Html.DisplayFor(model => model.IdgrupyNavigation.Idgrupy)

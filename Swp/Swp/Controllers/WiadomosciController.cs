@@ -22,7 +22,7 @@ namespace Swp.Controllers
         // GET: Wiadomosci
         public async Task<IActionResult> Index()
         {
-            UserManager<Uzytkownik> userManager;
+            System.Console.WriteLine(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
             var swpContext = _context.Wiadomosc.Include(w => w.IdzolnierzaNavigation);
             return View(await swpContext.ToListAsync());
         }

@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<Swp.Model.Bron>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SWP - Uzbrojenie";
 }
 
 <h2>Index</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Dodaj broń</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nazwabroni)
+                Nazwa broni
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StanBroni)
+                Stan broni
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+                Żołnierz
             </th>
             <th></th>
         </tr>
@@ -34,7 +34,7 @@
                 @Html.DisplayFor(modelItem => item.StanBroni)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.Idzolnierza)
+                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.StopienString) @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Idbroni">Edit</a> |

@@ -1,14 +1,12 @@
 ﻿@model Swp.Model.Grupa
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "SWP - @Html.DisplayNameFor(model => model.Nazwagrupy) ";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.Idgrupy)</h2>
 
 <div>
-    <h4>Zajecia grupy @Html.DisplayNameFor(model => model.Nazwagrupy)</h4>
-    <hr />
     <dl class="dl-horizontal">
 
 
@@ -16,28 +14,24 @@
         <thead>
             <tr>
                 <th>
-                    Stopień
-                </th>
+                   </th>   
                 <th>
-                    Imie
+                   
                 </th>
-                <th>
-                    Nazwisko
-                </th>
+
             </tr>
         </thead>
         <tbody>
+            @{ int i = 1;}
             @foreach (var item in Model.Zolnierz)
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.StopnieSlownik[item.Stopien])
+                        @i
+                        @{i++;}
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Imie)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nazwisko)
+                        @Html.DisplayFor(modelItem => item.StopienString) @Html.DisplayFor(modelItem => item.FullName)
                     </td>
                 </tr>
             }
@@ -45,6 +39,6 @@
     </table>
 </div>
     <div>
-        <a asp-action="Edit" asp-route-id="@Model.Idgrupy">Edit</a> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.Idgrupy">Edytuj</a> |
+        <a asp-action="Index">Powrót</a>
     </div>

@@ -18,6 +18,9 @@ namespace Swp.Controllers
             _context = context;
         }
 
+       
+
+
         public async Task<string> GetStopienfromInt(int stopien)
         {
             return Enumerations.StopnieSlownik[stopien];
@@ -154,6 +157,11 @@ namespace Swp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var zolnierz = await _context.Zolnierz.FindAsync(id);
+            var wyjscia = _context.Wyjscie.Where(d => d.Idzolnierza == id);
+            foreach(Wyjscie wyjscie in wyjscia)
+            {
+                _context.Wyjscie.Remove(wyjscie);
+            }
             _context.Zolnierz.Remove(zolnierz);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

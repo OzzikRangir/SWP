@@ -19,7 +19,6 @@ namespace Swp.Areas.Identity.Pages.Account
         private readonly SignInManager<Uzytkownik> _signInManager;
         private readonly UserManager<Uzytkownik> _userManager;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<Uzytkownik> userManager,
@@ -52,6 +51,7 @@ namespace Swp.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
         }
 
         public void OnGet(string returnUrl = null)
@@ -64,14 +64,15 @@ namespace Swp.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new Uzytkownik { Login = Input.Email};
+                var user = new Uzytkownik { Login = Input.Email };
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
-                    
                     await _signInManager.SignInAsync(user, isPersistent: false);
+                    
+             
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)
