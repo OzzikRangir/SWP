@@ -19,6 +19,7 @@ namespace Swp.Model
         }
 
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDZOLNIERZA")]
         public int Idzolnierza { get; set; }
         [Column("IDGRUPY")]
@@ -63,6 +64,15 @@ namespace Swp.Model
         [InverseProperty("IdzolnierzaNavigation")]
         public ICollection<Wyjscie> Wyjscie { get; set; }
 
+        [NotMapped]
+        public string FullName
+        {
+            get
+            {
+                return Nazwisko + " " + Imie;
+            }
+            
+        }
         public Dictionary<int, string> StopnieSlownik = new Dictionary<int, string>()
         {
 

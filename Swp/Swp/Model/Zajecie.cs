@@ -9,6 +9,7 @@ namespace Swp.Model
     public partial class Zajecie
     {
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDZAJECIA")]
         public int Idzajecia { get; set; }
         [Column("IDGRUPY")]

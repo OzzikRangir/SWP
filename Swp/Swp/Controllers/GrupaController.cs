@@ -21,7 +21,8 @@ namespace Swp.Controllers
         // GET: Grupa
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Grupa.ToListAsync());
+
+            return View(await _context.Grupa.Include(c => c.Zolnierz).ToListAsync());
         }
 
         // GET: Grupa/Details/5
@@ -32,7 +33,7 @@ namespace Swp.Controllers
                 return NotFound();
             }
 
-            var grupa = await _context.Grupa
+            var grupa = await _context.Grupa.Include(c => c.Zolnierz)
                 .FirstOrDefaultAsync(m => m.Idgrupy == id);
             if (grupa == null)
             {
@@ -41,6 +42,25 @@ namespace Swp.Controllers
 
             return View(grupa);
         }
+
+        public async Task<IActionResult> Zajecia(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var grupa = await _context.Grupa.Include(c => c.Zajecie)
+                .FirstOrDefaultAsync(m => m.Idgrupy == id);
+            if (grupa == null)
+            {
+                return NotFound();
+            }
+
+            return View(grupa);
+        }
+
+
 
         // GET: Grupa/Create
         public IActionResult Create()
@@ -138,6 +158,8 @@ namespace Swp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+            var zolnierze = await _context.Grupa.Include(c => c.Zajecie)
+    .FirstOrDefaultAsync(m => m.Idgrupy == id);
             var grupa = await _context.Grupa.FindAsync(id);
             _context.Grupa.Remove(grupa);
             await _context.SaveChangesAsync();

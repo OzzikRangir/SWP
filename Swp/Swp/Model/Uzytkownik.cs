@@ -14,6 +14,7 @@ namespace Swp.Model
         }
 
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDUZYTKOWNIKA")]
         public int Iduzytkownika { get; set; }
         [Column("LOGIN")]

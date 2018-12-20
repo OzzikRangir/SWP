@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,7 @@ namespace Swp.Controllers
         // GET: Wiadomosci
         public async Task<IActionResult> Index()
         {
+            UserManager<Uzytkownik> userManager;
             var swpContext = _context.Wiadomosc.Include(w => w.IdzolnierzaNavigation);
             return View(await swpContext.ToListAsync());
         }

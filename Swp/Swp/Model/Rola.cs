@@ -14,6 +14,7 @@ namespace Swp.Model
         }
 
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDROLI")]
         public int Idroli { get; set; }
         [Required]

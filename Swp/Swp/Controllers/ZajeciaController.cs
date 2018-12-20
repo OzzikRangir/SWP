@@ -56,7 +56,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idzajecia,Idgrupy,Datazajecia")] Zajecie zajecie)
+        public async Task<IActionResult> Create([Bind("Idgrupy,Datazajecia")] Zajecie zajecie)
         {
             if (ModelState.IsValid)
             {

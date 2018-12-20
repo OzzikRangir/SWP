@@ -61,15 +61,16 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idzolnierza,Idgrupy,Stopien,Imie,Naziwsko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu")] Zolnierz zolnierz)
+        public async Task<IActionResult> Create([Bind("Idgrupy,Stopien,Imie,Nazwisko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu")] Zolnierz zolnierz)
         {
+            ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
             if (ModelState.IsValid)
             {
                 _context.Add(zolnierz);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
+            
             return View(zolnierz);
         }
 
@@ -86,6 +87,7 @@ namespace Swp.Controllers
             {
                 return NotFound();
             }
+            ViewData["Stopnie"] = new SelectList(Enumerations.StopnieSlownik, "Key", "Value", zolnierz.Stopien);
             ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
             return View(zolnierz);
         }
@@ -95,7 +97,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idzolnierza,Idgrupy,Stopien,Imie,Naziwsko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu")] Zolnierz zolnierz)
+        public async Task<IActionResult> Edit(int id, [Bind("Idzolnierza,Idgrupy,Stopien,Imie,Nazwisko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu")] Zolnierz zolnierz)
         {
             if (id != zolnierz.Idzolnierza)
             {
@@ -122,6 +124,7 @@ namespace Swp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Stopnie"] = new SelectList(Enumerations.StopnieSlownik, "Key", "Value", zolnierz.Stopien);
             ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
             return View(zolnierz);
         }

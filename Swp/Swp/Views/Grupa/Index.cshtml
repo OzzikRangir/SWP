@@ -29,9 +29,10 @@
                 @Html.DisplayFor(modelItem => item.Nazwagrupy)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Idgrupy">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idgrupy">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idgrupy">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Idgrupy">Edytuj nazwę</a> |
+                <a asp-action="Details" asp-route-id="@item.Idgrupy">Lista grupy</a> |
+                <a asp-action="Zajecia" asp-route-id="@item.Idgrupy">Zajęcia grupy</a>
+                <a asp-action="Delete" asp-route-id="@item.Idgrupy">Usuń</a>
             </td>
         </tr>
 }

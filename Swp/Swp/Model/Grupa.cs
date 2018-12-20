@@ -15,6 +15,7 @@ namespace Swp.Model
         }
 
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDGRUPY")]
         [StringLength(10)]
         public string Idgrupy { get; set; }

@@ -47,7 +47,7 @@ namespace Swp.Controllers
         // GET: Bron/Create
         public IActionResult Create()
         {
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza");
+            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idbroni,Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
+        public async Task<IActionResult> Create([Bind("Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace Swp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza", bron.Idzolnierza);
+            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View(bron);
         }
 
@@ -90,7 +90,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idbroni,Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
+        public async Task<IActionResult> Edit(int id, [Bind("Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
         {
             if (id != bron.Idbroni)
             {

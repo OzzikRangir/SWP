@@ -9,6 +9,7 @@ namespace Swp.Model
     public partial class Uzytkownikrola
     {
         [Column("ID")]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Column("IDUZYTKOWNIKA")]
         public int Iduzytkownika { get; set; }
