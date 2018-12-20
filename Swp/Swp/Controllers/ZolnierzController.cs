@@ -28,7 +28,7 @@ namespace Swp.Controllers
         // GET: Zolnierz
         public async Task<IActionResult> Index()
         {
-            var swpContext = _context.Zolnierz.Include(z => z.IdgrupyNavigation);
+            var swpContext = _context.Zolnierz.Include(z => z.IdgrupyNavigation).OrderBy(z => z.Nazwisko).OrderByDescending(z => z.Stopien);
             return View(await swpContext.ToListAsync());
         }
 

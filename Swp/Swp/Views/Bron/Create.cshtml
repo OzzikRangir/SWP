@@ -4,42 +4,40 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
-
-<h4>Bron</h4>
+<h2>Dodaj broń</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Idbroni" class="control-label"></label>
+            <div class=" form-group">
+                <label asp-for="Idbroni" class="control-label">Nr broni</label>
                 <input asp-for="Idbroni" class="form-control" />
                 <span asp-validation-for="Idbroni" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Idzolnierza" class="control-label"></label>
+                <label asp-for="Idzolnierza" class="control-label">Imię i nazwisko</label>
                 <select asp-for="Idzolnierza" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Idzolnierza"];"></select>
             </div>
             <div class=" form-group">
-                    <label asp-for="Nazwabroni" class="control-label"></label>
+                <label asp-for="Nazwabroni" class="control-label">Nazwa broni</label>
                     <input asp-for="Nazwabroni" class="form-control" />
                     <span asp-validation-for="Nazwabroni" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="StanBroni" class="control-label"></label>
+                <label asp-for="StanBroni" class="control-label">Stan broni</label>
                 <input asp-for="StanBroni" class="form-control" />
                 <span asp-validation-for="StanBroni" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Dodaj" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Powrót</a>
 </div>
 
 @section Scripts {

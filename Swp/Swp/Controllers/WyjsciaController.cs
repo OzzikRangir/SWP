@@ -47,6 +47,7 @@ namespace Swp.Controllers
         // GET: Wyjscia/Create
         public IActionResult Create()
         {
+            ViewData["RodzajWyjscia"] = new SelectList(Enumerations.WyjsciaSlownik, "Key", "Value");
             ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View();
         }
@@ -67,6 +68,7 @@ namespace Swp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["RodzajWyjscia"] = new SelectList(Enumerations.WyjsciaSlownik, "Key", "Value");
             ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View(wyjscie);
         }

@@ -15,7 +15,7 @@ namespace Swp.Model
         [Column("IDZOLNIERZA")]
         public int? Idzolnierza { get; set; }
         [Column("RODZAJ_WYJSCIA")]
-        public int? RodzajWyjscia { get; set; }
+        public int RodzajWyjscia { get; set; }
         [Column("DATAWYJSCIA", TypeName = "datetime")]
         public DateTime? Datawyjscia { get; set; }
         [Column("DATAPOWROTU", TypeName = "datetime")]
@@ -25,5 +25,16 @@ namespace Swp.Model
         [ForeignKey("Idzolnierza")]
         [InverseProperty("Wyjscie")]
         public Zolnierz IdzolnierzaNavigation { get; set; }
+
+        public Dictionary<int, string> WyjsciaSlownik = new Dictionary<int, string>()
+        {
+
+        {0,"PS" },
+        {1, "PJ" },
+        {2,"KU" },
+        {3,"PSŁ" }
+      
+
+};
     }
 }

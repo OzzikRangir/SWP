@@ -26,7 +26,7 @@ namespace Swp.Controllers
         }
 
         // GET: Bron/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -56,7 +56,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
+        public async Task<IActionResult> Create([Bind("Idbroni,Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace Swp.Controllers
         }
 
         // GET: Bron/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -81,7 +81,7 @@ namespace Swp.Controllers
             {
                 return NotFound();
             }
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza", bron.Idzolnierza);
+            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName", bron.Idzolnierza);
             return View(bron);
         }
 
@@ -90,7 +90,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
+        public async Task<IActionResult> Edit(string id, [Bind("Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
         {
             if (id != bron.Idbroni)
             {
@@ -122,7 +122,7 @@ namespace Swp.Controllers
         }
 
         // GET: Bron/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
@@ -143,7 +143,7 @@ namespace Swp.Controllers
         // POST: Bron/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var bron = await _context.Bron.FindAsync(id);
             _context.Bron.Remove(bron);
@@ -151,7 +151,7 @@ namespace Swp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BronExists(int id)
+        private bool BronExists(string id)
         {
             return _context.Bron.Any(e => e.Idbroni == id);
         }
