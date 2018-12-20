@@ -47,7 +47,7 @@ namespace Swp.Controllers
         // GET: Wyjscia/Create
         public IActionResult Create()
         {
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza");
+            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View();
         }
 
@@ -56,15 +56,18 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idwyjscia,Idzolnierza,RodzajWyjscia")] Wyjscie wyjscie)
+        public async Task<IActionResult> Create([Bind("Idzolnierza,RodzajWyjscia,Datawyjscia")] Wyjscie wyjscie)
         {
+
+            wyjscie.Datawyjscia = DateTime.Now;
+            System.Console.WriteLine(wyjscie.Datawyjscia);
             if (ModelState.IsValid)
             {
                 _context.Add(wyjscie);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza", wyjscie.Idzolnierza);
+            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View(wyjscie);
         }
 
@@ -82,6 +85,44 @@ namespace Swp.Controllers
                 return NotFound();
             }
             ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza", wyjscie.Idzolnierza);
+            return View(wyjscie);
+        }
+
+        public async Task<IActionResult> Powrot(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var wyjscie = await _context.Wyjscie.FindAsync(id);
+            wyjscie.Datapowrotu = DateTime.Now;
+
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(wyjscie);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!WyjscieExists(wyjscie.Idwyjscia))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            if (wyjscie == null)
+            {
+                return NotFound();
+            }
             return View(wyjscie);
         }
 

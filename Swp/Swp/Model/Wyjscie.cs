@@ -16,6 +16,11 @@ namespace Swp.Model
         public int? Idzolnierza { get; set; }
         [Column("RODZAJ_WYJSCIA")]
         public int? RodzajWyjscia { get; set; }
+        [Column("DATAWYJSCIA", TypeName = "datetime")]
+        public DateTime? Datawyjscia { get; set; }
+        [Column("DATAPOWROTU", TypeName = "datetime")]
+        public DateTime? Datapowrotu { get; set; }
+
 
         [ForeignKey("Idzolnierza")]
         [InverseProperty("Wyjscie")]

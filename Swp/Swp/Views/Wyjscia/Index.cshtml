@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Swp.Model.Wyjscie>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SWP - Książka wychodzących";
 }
 
-<h2>Index</h2>
+<h2>Książka wychodzących</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,27 +13,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.RodzajWyjscia)
+                Data wyjścia
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+                Imie i nazwisko
+            </th>
+            <th>Rodzaj wyjscia
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Where(d => d.Datapowrotu == null)) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datawyjscia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RodzajWyjscia)
             </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.Idzolnierza)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Idwyjscia">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idwyjscia">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idwyjscia">Delete</a>
+                <a asp-action="Powrot" asp-route-id="@item.Idwyjscia">Powrót</a>
             </td>
         </tr>
 }

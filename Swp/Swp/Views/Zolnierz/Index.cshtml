@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Swp.Model.Zolnierz>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SWP - Ewidencja";
 }
 
-<h2>Index</h2>
+<h2>Ewidencja pododdziału</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,14 +12,9 @@
 <table class="table">
     <thead>
         <tr>
+       
             <th>
-                @Html.DisplayNameFor(model => model.Stopien)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imie)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nazwisko)
+                Żołnierz
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Numertelefonu)
@@ -34,13 +29,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.StopnieSlownik[item.Stopien])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imie)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nazwisko)
+                @Html.DisplayFor(modelItem => item.StopnieSlownik[item.Stopien]) @Html.DisplayFor(modelItem => item.Imie) @Html.DisplayFor(modelItem => item.Nazwisko)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Numertelefonu)
@@ -49,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.IdgrupyNavigation.Idgrupy)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Idzolnierza">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idzolnierza">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idzolnierza">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Idzolnierza">Edytuj</a> |
+                <a asp-action="Details" asp-route-id="@item.Idzolnierza">Informacje</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idzolnierza">Usuń</a>
             </td>
         </tr>
 }
