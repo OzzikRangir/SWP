@@ -14,8 +14,7 @@ namespace Swp.Model
         [Column("IDZOLNIERZA")]
         public int? Idzolnierza { get; set; }
         [Column("RODZAJ_WYJSCIA")]
-        [StringLength(80)]
-        public string RodzajWyjscia { get; set; }
+        public int? RodzajWyjscia { get; set; }
 
         [ForeignKey("Idzolnierza")]
         [InverseProperty("Wyjscie")]

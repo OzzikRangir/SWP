@@ -11,5 +11,8 @@ namespace Swp.Model
         [Key]
         [Column("IDWNIOSKU")]
         public int Idwniosku { get; set; }
+        [Column("NAZWAPLIKU")]
+        [StringLength(80)]
+        public string Nazwapliku { get; set; }
     }
 }

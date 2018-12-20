@@ -12529,23 +12529,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Users\\Przemek\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\Source\\Repos\\SWP\\Swp\\Swp\\Swp.csproj",
+      "projectUniqueName": "C:\\Users\\Przemek\\Source\\Repos\\SWP\\Swp\\Swp\\Swp.csproj",
       "projectName": "Swp",
-      "projectPath": "C:\\Users\\Student\\Source\\Repos\\SWP\\Swp\\Swp\\Swp.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\Source\\Repos\\SWP\\Swp\\Swp\\obj\\",
+      "projectPath": "C:\\Users\\Przemek\\Source\\Repos\\SWP\\Swp\\Swp\\Swp.csproj",
+      "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Przemek\\Source\\Repos\\SWP\\Swp\\Swp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

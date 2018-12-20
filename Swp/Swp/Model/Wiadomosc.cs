@@ -17,7 +17,6 @@ namespace Swp.Model
         [StringLength(80)]
         public string Tytul { get; set; }
         [Column("TRESC")]
-        [StringLength(80)]
         public string Tresc { get; set; }
 
         [ForeignKey("Idzolnierza")]

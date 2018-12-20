@@ -8,21 +8,22 @@ namespace Swp.Model
     [Table("UZYTKOWNIK")]
     public partial class Uzytkownik
     {
-        [Column("IDUZYKOWNIKA")]
-        public int Iduzykownika { get; set; }
-        [Column("IDZOLNIERZA")]
-        public int Idzolnierza { get; set; }
+        public Uzytkownik()
+        {
+            Uzytkownikrola = new HashSet<Uzytkownikrola>();
+        }
+
+        [Key]
+        [Column("IDUZYTKOWNIKA")]
+        public int Iduzytkownika { get; set; }
         [Column("LOGIN")]
         [StringLength(80)]
         public string Login { get; set; }
         [Column("HASLO")]
-        [StringLength(80)]
+        [StringLength(1024)]
         public string Haslo { get; set; }
-        [Column("UPRAWNIENIA")]
-        public int? Uprawnienia { get; set; }
 
-        [ForeignKey("Idzolnierza")]
-        [InverseProperty("Uzytkownik")]
-        public Zolnierz IdzolnierzaNavigation { get; set; }
+        [InverseProperty("IduzytkownikaNavigation")]
+        public ICollection<Uzytkownikrola> Uzytkownikrola { get; set; }
     }
 }

@@ -13,27 +13,23 @@ namespace Swp.Model
             Bron = new HashSet<Bron>();
             Detalewiadomosci = new HashSet<Detalewiadomosci>();
             Sluzba = new HashSet<Sluzba>();
-            Uzytkownik = new HashSet<Uzytkownik>();
             Wiadomosc = new HashSet<Wiadomosc>();
             Wyjazd = new HashSet<Wyjazd>();
             Wyjscie = new HashSet<Wyjscie>();
         }
 
         [Key]
-        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDZOLNIERZA")]
         public int Idzolnierza { get; set; }
         [Column("IDGRUPY")]
         [StringLength(10)]
         public string Idgrupy { get; set; }
-        [Column("STOPIEN")]
-        public int Stopien { get; set; }
         [Column("IMIE")]
         [StringLength(80)]
         public string Imie { get; set; }
-        [Column("NAZIWSKO")]
+        [Column("NAZWISKO")]
         [StringLength(80)]
-        public string Naziwsko { get; set; }
+        public string Nazwisko { get; set; }
         [Column("ADRES")]
         [StringLength(80)]
         public string Adres { get; set; }
@@ -47,7 +43,9 @@ namespace Swp.Model
         [StringLength(11)]
         public string Pesel { get; set; }
         [Column("NUMERTELEFONU", TypeName = "numeric(9, 0)")]
-        public decimal? Numertelefonu { get; set; }        
+        public decimal? Numertelefonu { get; set; }
+        [Column("STOPIEN")]
+        public int Stopien { get; set; }
 
         [ForeignKey("Idgrupy")]
         [InverseProperty("Zolnierz")]
@@ -58,8 +56,6 @@ namespace Swp.Model
         public ICollection<Detalewiadomosci> Detalewiadomosci { get; set; }
         [InverseProperty("IdzolnierzaNavigation")]
         public ICollection<Sluzba> Sluzba { get; set; }
-        [InverseProperty("IdzolnierzaNavigation")]
-        public ICollection<Uzytkownik> Uzytkownik { get; set; }
         [InverseProperty("IdzolnierzaNavigation")]
         public ICollection<Wiadomosc> Wiadomosc { get; set; }
         [InverseProperty("IdzolnierzaNavigation")]

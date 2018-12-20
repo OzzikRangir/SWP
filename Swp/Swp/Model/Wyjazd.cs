@@ -14,8 +14,7 @@ namespace Swp.Model
         [Column("IDZOLNIERZA")]
         public int? Idzolnierza { get; set; }
         [Column("RODZAJ_WYJAZDU")]
-        [StringLength(80)]
-        public string RodzajWyjazdu { get; set; }
+        public int? RodzajWyjazdu { get; set; }
         [Column("DATAWYJAZDU", TypeName = "datetime")]
         public DateTime? Datawyjazdu { get; set; }
 

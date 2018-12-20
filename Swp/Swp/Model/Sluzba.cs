@@ -16,8 +16,7 @@ namespace Swp.Model
         [Column("DATASLUZBY", TypeName = "datetime")]
         public DateTime? Datasluzby { get; set; }
         [Column("RODZAJSLUZBY")]
-        [StringLength(80)]
-        public string Rodzajsluzby { get; set; }
+        public int? Rodzajsluzby { get; set; }
 
         [ForeignKey("Idzolnierza")]
         [InverseProperty("Sluzba")]

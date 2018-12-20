@@ -1,10 +1,11 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Swp.Model
 {
-    public partial class SwpContext : DbContext
+    public partial class SwpContext : IdentityDbContext
     {
         public SwpContext()
         {
@@ -18,8 +19,10 @@ namespace Swp.Model
         public virtual DbSet<Bron> Bron { get; set; }
         public virtual DbSet<Detalewiadomosci> Detalewiadomosci { get; set; }
         public virtual DbSet<Grupa> Grupa { get; set; }
+        public virtual DbSet<Rola> Rola { get; set; }
         public virtual DbSet<Sluzba> Sluzba { get; set; }
         public virtual DbSet<Uzytkownik> Uzytkownik { get; set; }
+        public virtual DbSet<Uzytkownikrola> Uzytkownikrola { get; set; }
         public virtual DbSet<Wiadomosc> Wiadomosc { get; set; }
         public virtual DbSet<Wniosek> Wniosek { get; set; }
         public virtual DbSet<Wyjazd> Wyjazd { get; set; }
@@ -27,16 +30,7 @@ namespace Swp.Model
         public virtual DbSet<Zajecie> Zajecie { get; set; }
         public virtual DbSet<Zolnierz> Zolnierz { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlServer("Server=tcp:swpdb.database.windows.net,1433;Initial Catalog=SwpDatabase;Persist Security Info=False;User ID=admin_swp;Password=password135!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-//            }
-//        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Bron>(entity =>
             {
@@ -77,11 +71,16 @@ namespace Swp.Model
                 entity.Property(e => e.Nazwagrupy).IsUnicode(false);
             });
 
+            modelBuilder.Entity<Rola>(entity =>
+            {
+                entity.Property(e => e.Idroli).ValueGeneratedNever();
+
+                entity.Property(e => e.Nazwa).IsUnicode(false);
+            });
+
             modelBuilder.Entity<Sluzba>(entity =>
             {
                 entity.Property(e => e.Idsluzby).ValueGeneratedNever();
-
-                entity.Property(e => e.Rodzajsluzby).IsUnicode(false);
 
                 entity.HasOne(d => d.IdzolnierzaNavigation)
                     .WithMany(p => p.Sluzba)
@@ -91,17 +90,28 @@ namespace Swp.Model
 
             modelBuilder.Entity<Uzytkownik>(entity =>
             {
-                entity.HasKey(e => new { e.Idzolnierza, e.Iduzykownika });
+                entity.Property(e => e.Iduzytkownika).ValueGeneratedNever();
 
                 entity.Property(e => e.Haslo).IsUnicode(false);
 
                 entity.Property(e => e.Login).IsUnicode(false);
+            });
 
-                entity.HasOne(d => d.IdzolnierzaNavigation)
-                    .WithMany(p => p.Uzytkownik)
-                    .HasForeignKey(d => d.Idzolnierza)
+            modelBuilder.Entity<Uzytkownikrola>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.IdroliNavigation)
+                    .WithMany(p => p.Uzytkownikrola)
+                    .HasForeignKey(d => d.Idroli)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_UZYTKOWN_REFERENCE_ZOLNIERZ");
+                    .HasConstraintName("FK_UZYTKOWNIKROLA_REFERENCE_ROLA");
+
+                entity.HasOne(d => d.IduzytkownikaNavigation)
+                    .WithMany(p => p.Uzytkownikrola)
+                    .HasForeignKey(d => d.Iduzytkownika)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_UZYTKOWNIKROLA_REFERENCE_UZYTKOWNIK");
             });
 
             modelBuilder.Entity<Wiadomosc>(entity =>
@@ -121,13 +131,13 @@ namespace Swp.Model
             modelBuilder.Entity<Wniosek>(entity =>
             {
                 entity.Property(e => e.Idwniosku).ValueGeneratedNever();
+
+                entity.Property(e => e.Nazwapliku).IsUnicode(false);
             });
 
             modelBuilder.Entity<Wyjazd>(entity =>
             {
                 entity.Property(e => e.Idwyjazdu).ValueGeneratedNever();
-
-                entity.Property(e => e.RodzajWyjazdu).IsUnicode(false);
 
                 entity.HasOne(d => d.IdzolnierzaNavigation)
                     .WithMany(p => p.Wyjazd)
@@ -138,8 +148,6 @@ namespace Swp.Model
             modelBuilder.Entity<Wyjscie>(entity =>
             {
                 entity.Property(e => e.Idwyjscia).ValueGeneratedNever();
-
-                entity.Property(e => e.RodzajWyjscia).IsUnicode(false);
 
                 entity.HasOne(d => d.IdzolnierzaNavigation)
                     .WithMany(p => p.Wyjscie)
@@ -173,7 +181,7 @@ namespace Swp.Model
 
                 entity.Property(e => e.Imieojca).IsUnicode(false);
 
-                entity.Property(e => e.Naziwsko).IsUnicode(false);
+                entity.Property(e => e.Nazwisko).IsUnicode(false);
 
                 entity.Property(e => e.Pesel).IsUnicode(false);
 

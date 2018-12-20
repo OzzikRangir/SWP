@@ -17,7 +17,7 @@ namespace Swp.Model
         [StringLength(80)]
         public string Nazwabroni { get; set; }
         [Column("STAN_BRONI")]
-        [StringLength(10)]
+        [StringLength(80)]
         public string StanBroni { get; set; }
 
         [ForeignKey("Idzolnierza")]
