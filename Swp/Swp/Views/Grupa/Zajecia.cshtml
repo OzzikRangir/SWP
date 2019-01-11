@@ -1,18 +1,18 @@
 ﻿@model Swp.Model.Grupa
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Plan zajęć";
 }
 
-<h2>Details</h2>
+<h2>Plan zajęć</h2>
 
 <div>
-    <h4>Grupa</h4>
+    <h4>@Html.DisplayFor(model => model.Idgrupy)</h4>
     <hr />
     <dl class="dl-horizontal">
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nazwagrupy)
+            Specjalność
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Nazwagrupy)
@@ -30,12 +30,15 @@
         <tbody>
             @foreach (var item in Model.Zajecie.OrderBy(c => c.Datazajecia))
             {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Datazajecia)
-    </td>
-</tr>
-}
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datazajecia)
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
+    <div>
+        <a asp-action="Index">Powrót</a>
+    </div>
 </div>

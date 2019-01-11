@@ -1,35 +1,32 @@
 ﻿@model Swp.Model.Wyjscie
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Wypisz żołnierza";
 }
 
-<h2>Create</h2>
-
-<h4>Wyjscie</h4>
+<h2>Wypisz żołnierza</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Idzolnierza" class="control-label"></label>
+                <label asp-for="Idzolnierza" class="control-label">Imię i nazwisko</label>
                 <select asp-for="Idzolnierza" class ="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Idzolnierza"];"></select>
             </div>
             <div class="form-group">
-                <label asp-for="RodzajWyjscia" class="control-label"></label>
-                <input asp-for="RodzajWyjscia" class="form-control" />
-                <span asp-validation-for="RodzajWyjscia" class="text-danger"></span>
+                <label asp-for="RodzajWyjscia" class="control-label">Rodzaj wyjścia</label>
+                <select asp-for="RodzajWyjscia" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["RodzajWyjscia"];"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Wypisz żołnierza" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Powrót</a>
 </div>
 
 @section Scripts {

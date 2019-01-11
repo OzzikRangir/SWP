@@ -1,36 +1,34 @@
 ﻿@model Swp.Model.Grupa
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Dodaj grupę";
 }
 
-<h2>Create</h2>
-
-<h4>Grupa</h4>
+<h2>Dodaj grupę</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Idgrupy" class="control-label"></label>
+                <label asp-for="Idgrupy" class="control-label">Nr grupy</label>
                 <input asp-for="Idgrupy" class="form-control" />
                 <span asp-validation-for="Idgrupy" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Nazwagrupy" class="control-label"></label>
+                <label asp-for="Nazwagrupy" class="control-label">Specjalność</label>
                 <input asp-for="Nazwagrupy" class="form-control" />
                 <span asp-validation-for="Nazwagrupy" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Dodaj" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Powrót</a>
 </div>
 
 @section Scripts {

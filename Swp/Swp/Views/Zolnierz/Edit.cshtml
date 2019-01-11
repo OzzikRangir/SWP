@@ -1,12 +1,12 @@
 ﻿@model Swp.Model.Zolnierz
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edytuj dane żołnierza";
 }
 
-<h2>Edit</h2>
+<h2>Dane osobowe</h2>
 
-<h4>Zolnierz</h4>
+<h4>@Html.DisplayFor(model => model.StopienString) @Html.DisplayFor(model => model.Imie) @Html.DisplayFor(model => model.Nazwisko)</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,58 +14,58 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Idzolnierza" />
             <div class="form-group">
-                <label asp-for="Idgrupy" class="control-label"></label>
+                <label asp-for="Idgrupy" class="control-label">Nr grupy</label>
                 <select asp-for="Idgrupy" class="form-control" asp-items="ViewBag.Idgrupy"></select>
                 <span asp-validation-for="Idgrupy" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Stopien" class="control-label"></label>
+                <label asp-for="Stopien" class="control-label">Stopień</label>
                 <select asp-for="Stopien" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Stopnie"];"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Imie" class="control-label"></label>
+                <label asp-for="Imie" class="control-label">Imię</label>
                 <input asp-for="Imie" class="form-control" />
                 <span asp-validation-for="Imie" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Nazwisko" class="control-label"></label>
+                <label asp-for="Nazwisko" class="control-label">Nazwisko</label>
                 <input asp-for="Nazwisko" class="form-control" />
                 <span asp-validation-for="Nazwisko" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Adres" class="control-label"></label>
+                <label asp-for="Adres" class="control-label">Adres</label>
                 <input asp-for="Adres" class="form-control" />
                 <span asp-validation-for="Adres" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Imieojca" class="control-label"></label>
+                <label asp-for="Imieojca" class="control-label">Imię ojca</label>
                 <input asp-for="Imieojca" class="form-control" />
                 <span asp-validation-for="Imieojca" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Imiematki" class="control-label"></label>
+                <label asp-for="Imiematki" class="control-label">Imię matki</label>
                 <input asp-for="Imiematki" class="form-control" />
                 <span asp-validation-for="Imiematki" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Pesel" class="control-label"></label>
+                <label asp-for="Pesel" class="control-label">PESEL</label>
                 <input asp-for="Pesel" class="form-control" />
                 <span asp-validation-for="Pesel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Numertelefonu" class="control-label"></label>
+                <label asp-for="Numertelefonu" class="control-label">Numer telefonu</label>
                 <input asp-for="Numertelefonu" class="form-control" />
                 <span asp-validation-for="Numertelefonu" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Zapisz" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Powrót</a>
 </div>
 
 @section Scripts {

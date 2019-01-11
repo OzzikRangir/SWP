@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Swp.Model.Wyjscie>
 
 @{
-    ViewData["Title"] = "SWP - Książka wychodzących";
+    ViewData["Title"] = "Książka wychodzących";
 }
 
 <h2>Książka wychodzących</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Wypisz żołnierza</a>
 </p>
 <table class="table">
     <thead>
@@ -33,7 +33,7 @@
                 @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RodzajWyjscia)
+                @Html.DisplayFor(modelItem => item.WyjsciaSlownik[item.RodzajWyjscia])
             </td>
 
             <td>

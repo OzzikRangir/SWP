@@ -1,7 +1,7 @@
 ﻿@model Swp.Model.Zolnierz
 
 @{
-    ViewData["Title"] = "SWP - " + Html.DisplayNameFor(model => model.FullName);
+    ViewData["Title"] = "Dane osobowe";
 }
 
 <h2>Dane osobowe</h2>
@@ -49,6 +49,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Idzolnierza">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Idzolnierza">Edytuj</a> |
+    <a asp-action="Index">Powrót</a>
 </div>

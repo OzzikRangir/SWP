@@ -9,9 +9,9 @@ namespace Swp.Model
     public partial class Bron
     {
         [Key]
-        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDBRONI")]
-        public int Idbroni { get; set; }
+        [StringLength(10)]
+        public string Idbroni { get; set; }
         [Column("IDZOLNIERZA")]
         public int? Idzolnierza { get; set; }
         [Column("NAZWABRONI")]

@@ -26,5 +26,18 @@ namespace Swp.Model
         {13,"kpt." },
         
 };
+
+
+
+        public static Dictionary<int, string> WyjsciaSlownik = new Dictionary<int, string>()
+        {
+
+        {0,"PS" },
+        {1, "PJ" },
+        {2,"KU" },
+        {3,"PSŁ" }
+
+
+};
     }
 }

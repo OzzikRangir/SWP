@@ -1,15 +1,12 @@
 ﻿@model Swp.Model.Grupa
 
 @{
-    ViewData["Title"] = "SWP - @Html.DisplayNameFor(model => model.Nazwagrupy) ";
+    ViewData["Title"] = @Html.DisplayFor(model => model.Idgrupy);
 }
 
 <h2>@Html.DisplayFor(model => model.Idgrupy)</h2>
 
 <div>
-    <dl class="dl-horizontal">
-
-
     <table class="table">
         <thead>
             <tr>

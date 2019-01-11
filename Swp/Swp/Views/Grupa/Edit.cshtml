@@ -1,12 +1,12 @@
 ﻿@model Swp.Model.Grupa
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edytuj";
 }
 
-<h2>Edit</h2>
+<h2>Edytuj grupę</h2>
 
-<h4>Grupa</h4>
+<h4>@Html.DisplayFor(model => model.Idgrupy)</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,19 +14,19 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Idgrupy" />
             <div class="form-group">
-                <label asp-for="Nazwagrupy" class="control-label"></label>
+                <label asp-for="Nazwagrupy" class="control-label">Specjalność</label>
                 <input asp-for="Nazwagrupy" class="form-control" />
                 <span asp-validation-for="Nazwagrupy" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Zapisz" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Powrót</a>
 </div>
 
 @section Scripts {
