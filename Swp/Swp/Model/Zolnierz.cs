@@ -47,11 +47,14 @@ namespace Swp.Model
         public int? Numertelefonu { get; set; }
         [Column("STOPIEN")]
         public int Stopien { get; set; }
+        [Column("IDUZYTKOWNIKA")]
+        public int? Iduzytkownika { get; set; }
 
         [ForeignKey("Idgrupy")]
         [InverseProperty("Zolnierz")]
         public Grupa IdgrupyNavigation { get; set; }
-        [InverseProperty("IdzolnierzaNavigation")]
+        [InverseProperty("Zolnierz")]
+        public Uzytkownik IduzytkownikaNavigation { get; set; }
         public ICollection<Bron> Bron { get; set; }
         [InverseProperty("IdzolnierzaNavigation")]
         public ICollection<Detalewiadomosci> Detalewiadomosci { get; set; }

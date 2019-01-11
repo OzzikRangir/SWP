@@ -8,58 +8,58 @@ using System.Threading.Tasks;
 
 namespace Swp.Identity
 {
-    public class RoleStore : IRoleStore<Uzytkownikrola>
+    public class RoleStore : IRoleStore<Rola>
     {
         public void Dispose()
         {
         }
 
-        public Task<IdentityResult> CreateAsync(Uzytkownikrola role, CancellationToken cancellationToken)
+        public Task<IdentityResult> CreateAsync(Rola role, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<IdentityResult> UpdateAsync(Uzytkownikrola role, CancellationToken cancellationToken)
+        public Task<IdentityResult> UpdateAsync(Rola role, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<IdentityResult> DeleteAsync(Uzytkownikrola role, CancellationToken cancellationToken)
+        public Task<IdentityResult> DeleteAsync(Rola role, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<string> GetRoleIdAsync(Uzytkownikrola role, CancellationToken cancellationToken)
+        public Task<string> GetRoleIdAsync(Rola role, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<string> GetRoleNameAsync(Uzytkownikrola role, CancellationToken cancellationToken)
+        public Task<string> GetRoleNameAsync(Rola role, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task SetRoleNameAsync(Uzytkownikrola role, string roleName, CancellationToken cancellationToken)
+        public Task SetRoleNameAsync(Rola role, string roleName, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<string> GetNormalizedRoleNameAsync(Uzytkownikrola role, CancellationToken cancellationToken)
+        public Task<string> GetNormalizedRoleNameAsync(Rola role, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task SetNormalizedRoleNameAsync(Uzytkownikrola role, string normalizedName, CancellationToken cancellationToken)
+        public Task SetNormalizedRoleNameAsync(Rola role, string normalizedName, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<Uzytkownikrola> FindByIdAsync(string roleId, CancellationToken cancellationToken)
+        public Task<Rola> FindByIdAsync(string roleId, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<Uzytkownikrola> FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)
+        public Task<Rola> FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }

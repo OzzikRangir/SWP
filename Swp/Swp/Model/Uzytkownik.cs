@@ -11,6 +11,7 @@ namespace Swp.Model
         public Uzytkownik()
         {
             Uzytkownikrola = new HashSet<Uzytkownikrola>();
+            Zolnierz = new HashSet<Zolnierz>();
         }
 
         [Key]
@@ -26,5 +27,7 @@ namespace Swp.Model
 
         [InverseProperty("IduzytkownikaNavigation")]
         public ICollection<Uzytkownikrola> Uzytkownikrola { get; set; }
+        [InverseProperty("IduzytkownikaNavigation")]
+        public ICollection<Zolnierz> Zolnierz { get; set; }
     }
 }

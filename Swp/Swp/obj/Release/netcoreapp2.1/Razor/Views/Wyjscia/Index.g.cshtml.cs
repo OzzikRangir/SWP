@@ -64,7 +64,7 @@ using Swp.Models;
             WriteLiteral("\r\n<h2>Książka wychodzących</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(147, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f89894fe9c7a41899731c0990d79d438", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b3c122416a44fa7aa1d7d3cf8f32918", async() => {
                 BeginContext(170, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -141,7 +141,7 @@ using Swp.Models;
             WriteLiteral("\r\n            </td>\r\n\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(938, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e45f911f6d0f465fba8fe7e1b77c5f90", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c68a304f12bc445c9ea57ac166a50aad", async() => {
                 BeginContext(992, 6, true);
                 WriteLiteral("Powrót");
                 EndContext();

@@ -30,10 +30,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
-                    <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
-                    <li><a asp-area="" asp-controller="Grupa" asp-action="Index">Obsługa grup</a></li>
-                    <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
+                        <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
+                        <li><a asp-area="" asp-controller="Grupa" asp-action="Index">Obsługa grup</a></li>
+                        <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
+                        <li><a asp-area="" asp-controller="Uzytkownicy" asp-action="Index">Uzytkownicy</a></li>
+                    }
                 </ul>
 				 <partial name="_LoginPartial" />
             </div>

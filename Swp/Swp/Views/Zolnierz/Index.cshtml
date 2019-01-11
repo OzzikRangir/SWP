@@ -12,7 +12,7 @@
 <table class="table">
     <thead>
         <tr>
-       
+
             <th>
                 Żołnierz
             </th>
@@ -26,23 +26,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.StopnieSlownik[item.Stopien]) @Html.DisplayFor(modelItem => item.Imie) @Html.DisplayFor(modelItem => item.Nazwisko)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numertelefonu)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdgrupyNavigation.Idgrupy)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Idzolnierza">Informacje</a> |
-                <a asp-action="Edit" asp-route-id="@item.Idzolnierza">Edytuj</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idzolnierza">Usuń</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StopnieSlownik[item.Stopien]) @Html.DisplayFor(modelItem => item.Imie) @Html.DisplayFor(modelItem => item.Nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numertelefonu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdgrupyNavigation.Idgrupy)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Idzolnierza">Informacje</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Idzolnierza">Edytuj</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Idzolnierza">Usuń</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

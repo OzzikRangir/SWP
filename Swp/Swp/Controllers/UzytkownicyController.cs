@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,13 @@ namespace Swp.Controllers
         // GET: Uzytkownicy
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Uzytkownik.ToListAsync());
+            var swpContext = _context.Uzytkownikrola.Include(u => u.IduzytkownikaNavigation.Zolnierz);
+            var roles = ((ClaimsIdentity)User.Identity).Claims
+                .Where(c => c.Type == ClaimTypes.Role)
+                .Select(c => c.Value);
+            ViewData["FullName"] = _context.Zolnierz;
+            ViewData["Roles"] = roles;
+            return View(await swpContext.ToListAsync());
         }
 
         // GET: Uzytkownicy/Details/5
@@ -53,7 +61,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Iduzytkownika,Login,Haslo")] Uzytkownik uzytkownik)
+        public async Task<IActionResult> Create([Bind("Iduzytkownika,Login")] Uzytkownik uzytkownik)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +93,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Iduzytkownika,Login,Haslo")] Uzytkownik uzytkownik)
+        public async Task<IActionResult> Edit(int id, [Bind("Iduzytkownika,Login")] Uzytkownik uzytkownik)
         {
             if (id != uzytkownik.Iduzytkownika)
             {
