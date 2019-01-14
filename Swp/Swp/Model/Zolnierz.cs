@@ -53,6 +53,7 @@ namespace Swp.Model
         [ForeignKey("Idgrupy")]
         [InverseProperty("Zolnierz")]
         public Grupa IdgrupyNavigation { get; set; }
+        [ForeignKey("IdUzytkownika")]
         [InverseProperty("Zolnierz")]
         public Uzytkownik IduzytkownikaNavigation { get; set; }
         public ICollection<Bron> Bron { get; set; }

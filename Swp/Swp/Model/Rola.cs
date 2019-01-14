@@ -7,11 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Swp.Model
 {
     [Table("ROLA")]
-    public partial class Rola : IdentityRole<string>
+    public partial class Rola
     {
         public Rola()
         {
-            Uzytkownikrola = new HashSet<Uzytkownikrola>();
+            Uzytkownik = new HashSet<Uzytkownik>();
         }
 
         [Key]
@@ -22,8 +22,7 @@ namespace Swp.Model
         [Column("NAZWA")]
         [StringLength(20)]
         public string Nazwa { get; set; }
-
         [InverseProperty("IdroliNavigation")]
-        public ICollection<Uzytkownikrola> Uzytkownikrola { get; set; }
+        public ICollection<Uzytkownik> Uzytkownik { get; set; }
     }
 }

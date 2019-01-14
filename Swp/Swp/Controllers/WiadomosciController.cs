@@ -23,7 +23,6 @@ namespace Swp.Controllers
         public async Task<IActionResult> Index()
         {
             System.Console.WriteLine(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
-            System.Console.WriteLine(User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value);
             var swpContext = _context.Wiadomosc.Include(w => w.IdzolnierzaNavigation);
             return View(await swpContext.ToListAsync());
         }

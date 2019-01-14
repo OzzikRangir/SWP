@@ -4,14 +4,26 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Swp.Model;
 using Swp.Models;
 
 namespace Swp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+
+        private readonly SwpContext _context;
+
+        public HomeController(SwpContext context)
         {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            
+            ViewData["Uzytkownik"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
             return View();
         }
 

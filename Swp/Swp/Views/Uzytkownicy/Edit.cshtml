@@ -6,7 +6,7 @@
 
 <h2>Edit</h2>
 
-<h4>Uzytkownik</h4>
+<h4>Uzytkownik @Html.ValueFor(mod => Model.Login)</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,14 +14,9 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Iduzytkownika" />
             <div class="form-group">
-                <label asp-for="Login" class="control-label"></label>
-                <input asp-for="Login" class="form-control" />
-                <span asp-validation-for="Login" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Haslo" class="control-label"></label>
-                <input asp-for="Haslo" class="form-control" />
-                <span asp-validation-for="Haslo" class="text-danger"></span>
+                <label asp-for="Idroli" class="control-label"></label>
+                <select asp-for="Idroli" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Rola"];"></select>
+                <span asp-validation-for="IdroliNavigation.Nazwa" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

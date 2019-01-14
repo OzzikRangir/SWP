@@ -22,7 +22,6 @@ namespace Swp.Model
         public virtual DbSet<Rola> Rola { get; set; }
         public virtual DbSet<Sluzba> Sluzba { get; set; }
         public virtual DbSet<Uzytkownik> Uzytkownik { get; set; }
-        public virtual DbSet<Uzytkownikrola> Uzytkownikrola { get; set; }
         public virtual DbSet<Wiadomosc> Wiadomosc { get; set; }
         public virtual DbSet<Wniosek> Wniosek { get; set; }
         public virtual DbSet<Wyjazd> Wyjazd { get; set; }
@@ -76,6 +75,7 @@ namespace Swp.Model
                 entity.Property(e => e.Idroli).ValueGeneratedNever();
 
                 entity.Property(e => e.Nazwa).IsUnicode(false);
+
             });
 
             modelBuilder.Entity<Sluzba>(entity =>
@@ -95,24 +95,16 @@ namespace Swp.Model
                 entity.Property(e => e.Haslo).IsUnicode(false);
 
                 entity.Property(e => e.Login).IsUnicode(false);
-            });
 
-            modelBuilder.Entity<Uzytkownikrola>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Idroli).IsUnicode(false);
 
                 entity.HasOne(d => d.IdroliNavigation)
-                    .WithMany(p => p.Uzytkownikrola)
+                    .WithMany(p => p.Uzytkownik)
                     .HasForeignKey(d => d.Idroli)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_UZYTKOWNIKROLA_REFERENCE_ROLA");
+                    .HasConstraintName("FK_UZYTKOWNIK_REFERENCE_ROLA");
 
-                entity.HasOne(d => d.IduzytkownikaNavigation)
-                    .WithMany(p => p.Uzytkownikrola)
-                    .HasForeignKey(d => d.Iduzytkownika)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_UZYTKOWNIKROLA_REFERENCE_UZYTKOWNIK");
             });
+
 
             modelBuilder.Entity<Wiadomosc>(entity =>
             {
@@ -187,10 +179,16 @@ namespace Swp.Model
 
                 entity.Property(e => e.Stopien).IsUnicode(false);
 
+                entity.Property(e => e.Iduzytkownika).IsUnicode(false);
+
                 entity.HasOne(d => d.IdgrupyNavigation)
                     .WithMany(p => p.Zolnierz)
                     .HasForeignKey(d => d.Idgrupy)
                     .HasConstraintName("FK_ZOLNIERZ_REFERENCE_GRUPA");
+                entity.HasOne(d => d.IduzytkownikaNavigation)
+                    .WithMany(p => p.Zolnierz)
+                    .HasForeignKey(d => d.Iduzytkownika)
+                    .HasConstraintName("FK_ZOLNIERZ_REFERENCE_UZYTKOWNIK");
             });
         }
     }
