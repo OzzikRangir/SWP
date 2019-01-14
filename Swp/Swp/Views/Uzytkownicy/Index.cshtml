@@ -11,7 +11,7 @@
 </p>
    @if (User.Identity.IsAuthenticated)
         {
-       @if(uzytkownik.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+       @if(Model.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
            
             {
         <p> TWOJA STARA</p>

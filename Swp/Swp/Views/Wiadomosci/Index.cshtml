@@ -1,47 +1,44 @@
 ﻿@model IEnumerable<Swp.Model.Wiadomosc>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Wiadomości";
 }
 
-<h2>Index</h2>
+<h2>Wiadomości</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Tytul)
+               
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tresc)
+                
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+                
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Tytul)
+                <!--<a asp-action="Create" asp-route-id=>Wyslij</a>-->
+                <button type="button" onclick="location.href='@Url.Action("Utworz", "Wiadomosci")'">Utwórz</button>
+
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tresc)
+    <td>
+        <!--<a asp-action="Odebrane" asp-route-id=>Odebrane</a>-->
+                <button type="button" onclick="location.href='@Url.Action("Odebrane", "Wiadomosci")'">Odebrane</button>
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.Imie) @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.Nazwisko)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Idwiadomosci">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idwiadomosci">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idwiadomosci">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <td>
+        <!--<a asp-action="Wyslane" asp-route-id=>Wysłane</a>-->
+        <button type="button" onclick="location.href='@Url.Action("Wyslane", "Wiadomosci")'">Wyslane</button>
+    </td>
+
+
+            </tr>
+
+        </tbody>
+    </table>

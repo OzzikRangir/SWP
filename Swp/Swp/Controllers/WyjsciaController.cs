@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Swp.Model;
@@ -17,9 +18,20 @@ namespace Swp.Controllers
         {
             _context = context;
         }
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
+        }
 
         // GET: Wyjscia
         public async Task<IActionResult> Index()
+        {
+            var swpContext = _context.Wyjscie.Include(w => w.IdzolnierzaNavigation);
+            return View(await swpContext.ToListAsync());
+        }
+
+        public async Task<IActionResult> Ksiazka()
         {
             var swpContext = _context.Wyjscie.Include(w => w.IdzolnierzaNavigation);
             return View(await swpContext.ToListAsync());
@@ -61,7 +73,6 @@ namespace Swp.Controllers
         {
 
             wyjscie.Datawyjscia = DateTime.Now;
-            System.Console.WriteLine(wyjscie.Datawyjscia);
             if (ModelState.IsValid)
             {
                 _context.Add(wyjscie);

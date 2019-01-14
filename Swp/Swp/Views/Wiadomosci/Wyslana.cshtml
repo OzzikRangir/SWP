@@ -1,0 +1,46 @@
+﻿@model Swp.Model.Wiadomosc
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Tytuł: @Html.DisplayFor(model => model.Tytul)</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Otrzymano:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Detalewiadomosci.Dataotrzymania)
+        </dd>
+        <dt>
+            Nadawca:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdzolnierzaNavigation.FullName)
+        </dd>
+        <dt>
+            Odbiorca:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Detalewiadomosci.IdzolnierzaNavigation.FullName)
+        </dd>
+
+
+        <hr />
+        <dt>
+            Treść:
+        </dt>
+       
+        <dd>
+            @Html.DisplayFor(model => model.Tresc)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Wyslane">Powrót do wysłanych</a>
+</div>

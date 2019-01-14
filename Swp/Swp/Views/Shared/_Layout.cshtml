@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-@{IEnumerable<Swp.Model.Uzytkownik> uzytkownik = ViewData["Uzytkownik"] as IEnumerable<Swp.Model.Uzytkownik>; }
+@{IEnumerable<Swp.Model.Uzytkownik> logged = ViewData["Logged"] as IEnumerable<Swp.Model.Uzytkownik>;
+}
 <html>
 <head>
     <meta charset="utf-8" />
@@ -31,13 +32,37 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" asp-controller="Home" asp-action="Index">
-                    @if (User.Identity.IsAuthenticated && uzytkownik.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.Idroli).FirstOrDefault() != null)
+                    @if (User.Identity.IsAuthenticated && ((IEnumerable<Swp.Model.Uzytkownik>)ViewData["Logged"]).Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).FirstOrDefault().Idroli != null)
                     {
-                        <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
-                        <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
-                        <li><a asp-area="" asp-controller="Grupa" asp-action="Index">Obsługa grup</a></li>
-                        <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
-                        <li><a asp-area="" asp-controller="Uzytkownicy" asp-action="Index">Uzytkownicy</a></li>
+                        @if (((IEnumerable<Swp.Model.Uzytkownik>)ViewData["Logged"]).Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+                        {
+                            <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
+                            <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
+                            <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
+                            <li><a asp-area="" asp-controller="Wiadomosci" asp-action="Index">Wiadomości</a></li>
+                            <li><a asp-area="" asp-controller="Uzytkownicy" asp-action="Index">Użytkownicy</a></li>
+                        }
+                        @if (((IEnumerable<Swp.Model.Uzytkownik>)ViewData["Logged"]).Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Sluzba")
+                        {
+                            <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
+                            <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
+                            <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
+                            <li><a asp-area="" asp-controller="Wiadomosci" asp-action="Index">Wiadomości</a></li>
+                        }
+                        @if (((IEnumerable<Swp.Model.Uzytkownik>)ViewData["Logged"]).Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Zolnierz")
+                        {
+                            <li><a asp-area="" asp-controller="Wiadomosci" asp-action="Index">Wiadomości</a></li>
+                            <li>
+                                <a asp-area="" asp-controller="Grupa" asp-action="Details" asp-route-id="@(((IEnumerable<Swp.Model.Zolnierz>)ViewData["Soldiers"])
+                                .Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value)
+                                .Select(a => a.Idgrupy).FirstOrDefault())">Grupa</a>
+                            </li>
+                            <li><a asp-area="" asp-controller="Bron" asp-action="Index">Uzbrojenie</a></li>
+                            <li><a asp-area="" asp-controller="Grupa" asp-action="Zajecia" asp-route-id="@(((IEnumerable<Swp.Model.Zolnierz>)ViewData["Soldiers"])
+                                .Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value)
+                                .Select(a => a.Idgrupy).FirstOrDefault())">Zajęcia</a></li>
+                        }
+
                     }
                 </ul>
 				 <partial name="_LoginPartial" />

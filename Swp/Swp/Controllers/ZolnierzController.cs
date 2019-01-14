@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Swp.Model;
@@ -19,7 +20,11 @@ namespace Swp.Controllers
             _context = context;
         }
 
-       
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
+        }
 
 
         public async Task<string> GetStopienfromInt(int stopien)
@@ -65,7 +70,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idgrupy,Stopien,Imie,Nazwisko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu")] Zolnierz zolnierz)
+        public async Task<IActionResult> Create([Bind("Idgrupy,Stopien,Imie,Nazwisko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu,Iduzytkownika")] Zolnierz zolnierz)
         {
             ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
             if (ModelState.IsValid)
@@ -93,6 +98,7 @@ namespace Swp.Controllers
             }
             ViewData["Stopnie"] = new SelectList(Enumerations.StopnieSlownik, "Key", "Value", zolnierz.Stopien);
             ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
+            ViewData["Uzytkownicy"] = new SelectList(_context.Uzytkownik, "Iduzytkownika", "Login", zolnierz.Iduzytkownika);
             return View(zolnierz);
         }
 
@@ -101,7 +107,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idzolnierza,Idgrupy,Stopien,Imie,Nazwisko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu")] Zolnierz zolnierz)
+        public async Task<IActionResult> Edit(int id, [Bind("Idzolnierza,Idgrupy,Stopien,Imie,Nazwisko,Adres,Imieojca,Imiematki,Pesel,Numertelefonu,Iduzytkownika")] Zolnierz zolnierz)
         {
             if (id != zolnierz.Idzolnierza)
             {

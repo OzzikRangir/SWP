@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Swp.Model.Wiadomosc>
+
+@{
+    ViewData["Title"] = "Wysłane";
+}
+
+<h2>Wysłane</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Odbiorca
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Tytuł
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detalewiadomosci.IdzolnierzaNavigation.Imie) @Html.DisplayFor(modelItem => item.Detalewiadomosci.IdzolnierzaNavigation.Nazwisko)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detalewiadomosci.Dataotrzymania)
+          
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tytul)
+            </td>
+            <td>
+                <a asp-action="Wyslana" asp-route-id="@item.Idwiadomosci">Wyświetl</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Index">Powrót do wiadomości</a>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Swp.Model;
@@ -18,11 +19,24 @@ namespace Swp.Controllers
             _context = context;
         }
 
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
+        }
+
         // GET: Bron
         public async Task<IActionResult> Index()
         {
+            if (_context.Uzytkownik.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator" ||
+                _context.Uzytkownik.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Sluzba") { 
             var swpContext = _context.Bron.Include(b => b.IdzolnierzaNavigation);
-            return View(await swpContext.ToListAsync());
+                return View(await swpContext.ToListAsync());
+            }
+        else{
+        var swpContext = _context.Bron.Include(b => b.IdzolnierzaNavigation).Where(b => b.IdzolnierzaNavigation.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+                return View(await swpContext.ToListAsync());
+            }
         }
 
         // GET: Bron/Details/5
@@ -90,7 +104,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
+        public async Task<IActionResult> Edit(string id, [Bind("Idbroni,Idzolnierza,Nazwabroni,StanBroni")] Bron bron)
         {
             if (id != bron.Idbroni)
             {

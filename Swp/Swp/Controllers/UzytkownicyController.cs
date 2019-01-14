@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Swp.Model;
@@ -14,10 +15,16 @@ namespace Swp.Controllers
     public class UzytkownicyController : Controller
     {
         private readonly SwpContext _context;
-
         public UzytkownicyController(SwpContext context)
         {
             _context = context;
+           
+        }
+
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
         }
 
         // GET: Uzytkownicy
@@ -25,7 +32,6 @@ namespace Swp.Controllers
         {
             var swpContext = _context.Uzytkownik.Include(u => u.Zolnierz).Include(r => r.IdroliNavigation);
 
-            ViewData["Uzytkownik"] = _context.Uzytkownik;
             ViewData["Roles"] = _context.Uzytkownik.Include(z => z.IdroliNavigation);
             return View(await swpContext.ToListAsync());
         }
@@ -79,6 +85,7 @@ namespace Swp.Controllers
             }
             var uzytkownik = await _context.Uzytkownik.FindAsync(id);
             ViewData["Rola"] = new SelectList(_context.Rola, "Idroli", "Nazwa", uzytkownik.Idroli);
+            
             if (uzytkownik == null)
             {
                 return NotFound();
@@ -91,8 +98,10 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idroli")] Uzytkownik uzytkownik)
+        public async Task<IActionResult> Edit(int id, [Bind("Iduzytkownika,Idroli,Haslo,Login,Zolnierz")] Uzytkownik uzytkownik)
         {
+            ViewData["Rola"] = new SelectList(_context.Rola, "Idroli", "Nazwa", uzytkownik.Idroli);
+            
             if (id != uzytkownik.Iduzytkownika)
             {
                 return NotFound();
@@ -118,6 +127,7 @@ namespace Swp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             return View(uzytkownik);
         }
 

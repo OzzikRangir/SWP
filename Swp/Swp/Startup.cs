@@ -41,6 +41,8 @@ namespace Swp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSession(options => options.Cookie.HttpOnly = true);
+
             services.AddDbContext<SwpContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -53,7 +55,7 @@ namespace Swp
             {
                 // Password settings
                 options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 5;
+                options.Password.RequiredLength = 4;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
@@ -68,7 +70,7 @@ namespace Swp
                 options.User.RequireUniqueEmail = false;
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddSessionStateTempDataProvider();
         }
        
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -88,6 +90,8 @@ namespace Swp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
+            
 
             app.UseAuthentication();
 

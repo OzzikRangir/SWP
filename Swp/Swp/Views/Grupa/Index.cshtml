@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Grupy";
+    IEnumerable<Swp.Model.Uzytkownik> logged = ViewData["Logged"] as IEnumerable<Swp.Model.Uzytkownik>;
 }
 
 <h2>Lista grup</h2>
@@ -23,17 +24,28 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Idgrupy)
-                        
-                    </td>
+
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nazwagrupy)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Idgrupy">Edytuj nazwę</a> |
-                <a asp-action="Details" asp-route-id="@item.Idgrupy">Lista grupy</a> |
-                <a asp-action="Zajecia" asp-route-id="@item.Idgrupy">Zajęcia grupy</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idgrupy">Usuń</a>
-            </td>
+            @if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+            {
+                <td>
+
+                    <a asp-action="Edit" asp-route-id="@item.Idgrupy">Edytuj nazwę</a> |
+                    <a asp-action="Details" asp-route-id="@item.Idgrupy">Lista grupy</a> |
+                    <a asp-action="Zajecia" asp-route-id="@item.Idgrupy">Zajęcia grupy</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Idgrupy">Usuń</a>
+                </td>
+            }
+            @if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Sluzba")
+            {
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Idgrupy">Lista grupy</a> |
+                    <a asp-action="Zajecia" asp-route-id="@item.Idgrupy">Zajęcia grupy</a>
+                </td>
+            }
         </tr>
 }
     </tbody>

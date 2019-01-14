@@ -8,7 +8,9 @@ namespace Swp.Model
     [Table("DETALEWIADOMOSCI")]
     public partial class Detalewiadomosci
     {
+
         [Key]
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         [Column("IDWIADOMOSCI")]
         public int Idwiadomosci { get; set; }
         [Column("IDZOLNIERZA")]

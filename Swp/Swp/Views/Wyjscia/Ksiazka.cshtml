@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Swp.Model.Wyjscie>
+
+@{
+    ViewData["Title"] = "Książka wychodzących";
+}
+
+<h2>Książka wychodzących</h2>
+
+<p>
+    <a asp-action="Create">Wypisz żołnierza</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Data wyjścia
+            </th>
+            <th>
+                Imie i nazwisko
+            </th>
+            <th>Rodzaj wyjscia
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Where(d => d.Datapowrotu == null)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datawyjscia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WyjsciaSlownik[item.RodzajWyjscia])
+            </td>
+
+            <td>
+                <a asp-action="Powrot" asp-route-id="@item.Idwyjscia">Powrót</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

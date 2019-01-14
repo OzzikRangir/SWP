@@ -130,11 +130,6 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Areas\Id
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Grupa\Zajecia.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Odebrane\Create.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Odebrane\Delete.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Odebrane\Details.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Odebrane\Edit.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Odebrane\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Sluzby\Create.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Sluzby\Delete.g.cshtml.cs
@@ -146,9 +141,7 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Uz
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Uzytkownicy\Details.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Uzytkownicy\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Uzytkownicy\Index.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Create.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Delete.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Details.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wyjazdy\Create.g.cshtml.cs
@@ -166,3 +159,8 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Za
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zajecia\Details.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zajecia\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Zajecia\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Odebrane.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Wyslane.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Odebrana.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Wyslana.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Utworz.g.cshtml.cs

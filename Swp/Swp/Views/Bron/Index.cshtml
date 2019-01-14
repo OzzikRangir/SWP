@@ -2,51 +2,60 @@
 
 @{
     ViewData["Title"] = "Uzbrojenie";
+    IEnumerable<Swp.Model.Uzytkownik> logged = ViewData["Logged"] as IEnumerable<Swp.Model.Uzytkownik>;
 }
 
 <h2>Ewidencja uzbrojenia</h2>
-
-<p>
-    <a asp-action="Create">Dodaj broń</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Numer broni
-            </th>
-            <th>
-                Nazwa broni
-            </th>
-            <th>
-                Stan broni
-            </th>
-            <th>
-                Żołnierz
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Idbroni)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nazwabroni)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StanBroni)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.StopienString) @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Idbroni">Edytuj</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idbroni">Usuń</a>
-            </td>
-        </tr>
+@if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+{
+    <p>
+        <a asp-action="Create">Dodaj broń</a>
+    </p>
 }
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Numer broni
+                </th>
+                <th>
+                    Nazwa broni
+                </th>
+                <th>
+                    Stan broni
+                </th>
+                <th>
+                    Żołnierz
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Idbroni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nazwabroni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StanBroni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.StopienString) @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
+                    </td>
+                    @if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+                    {
+                        <td>
+
+                            <a asp-action="Edit" asp-route-id="@item.Idbroni">Edytuj</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Idbroni"> Usuń </a>
+
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>

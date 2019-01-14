@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Swp.Model;
@@ -16,6 +17,12 @@ namespace Swp.Controllers
         public SluzbyController(SwpContext context)
         {
             _context = context;
+        }
+
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
         }
 
         // GET: Sluzby

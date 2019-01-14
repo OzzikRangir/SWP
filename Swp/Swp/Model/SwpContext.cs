@@ -179,12 +179,11 @@ namespace Swp.Model
 
                 entity.Property(e => e.Stopien).IsUnicode(false);
 
-                entity.Property(e => e.Iduzytkownika).IsUnicode(false);
-
                 entity.HasOne(d => d.IdgrupyNavigation)
                     .WithMany(p => p.Zolnierz)
                     .HasForeignKey(d => d.Idgrupy)
                     .HasConstraintName("FK_ZOLNIERZ_REFERENCE_GRUPA");
+
                 entity.HasOne(d => d.IduzytkownikaNavigation)
                     .WithMany(p => p.Zolnierz)
                     .HasForeignKey(d => d.Iduzytkownika)

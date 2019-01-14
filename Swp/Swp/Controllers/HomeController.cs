@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Swp.Model;
 using Swp.Models;
@@ -15,15 +16,24 @@ namespace Swp.Controllers
 
         private readonly SwpContext _context;
 
+
+
         public HomeController(SwpContext context)
         {
             _context = context;
+            
+        }
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
         }
 
-        public async Task<IActionResult> Index()
+
+        public IActionResult Index()
         {
-            
-            ViewData["Uzytkownik"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+
+            ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
             return View();
         }
 
