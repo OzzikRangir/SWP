@@ -110,7 +110,7 @@ using Swp.Models;
             WriteLiteral("        </tbody>\r\n    </table>\r\n    <div>\r\n        ");
             EndContext();
             BeginContext(875, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3377ece48f354ea09b54e05b81950887", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b946ad1bc19245a5a44412eabff836fc", async() => {
                 BeginContext(897, 6, true);
                 WriteLiteral("Powrót");
                 EndContext();

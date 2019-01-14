@@ -27,9 +27,6 @@
     <Content Update="Views\Wiadomosci\Odebrane.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Wyjscia\Ksiazka.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
   </ItemGroup>
 
 </Project>

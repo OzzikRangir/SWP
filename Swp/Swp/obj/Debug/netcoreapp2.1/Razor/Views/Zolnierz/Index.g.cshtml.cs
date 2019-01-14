@@ -66,7 +66,7 @@ using Swp.Models;
             WriteLiteral("\r\n<h2>Ewidencja pododdziału</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(132, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "744b198040254606955bb38b4fe30cb2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b36a557d76d14814b7f6ae0e50e5c36b", async() => {
                 BeginContext(155, 5, true);
                 WriteLiteral("Dodaj");
                 EndContext();
@@ -157,7 +157,7 @@ using Swp.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1087, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b25c16c1da8b47f39ff7c53fe328fda5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99a40a8d7a354d81b0974e77f0d1df76", async() => {
                 BeginContext(1144, 10, true);
                 WriteLiteral("Informacje");
                 EndContext();
@@ -192,7 +192,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1182, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0302a18f435a4f6aae34bafde2206cae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aef2e9b25b694660890c43ca6fec5313", async() => {
                 BeginContext(1236, 6, true);
                 WriteLiteral("Edytuj");
                 EndContext();
@@ -227,7 +227,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1270, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b91f678563bb4250912e59723bfad0dc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "59d8bba3c79940a6898e91755099d16a", async() => {
                 BeginContext(1326, 4, true);
                 WriteLiteral("Usuń");
                 EndContext();

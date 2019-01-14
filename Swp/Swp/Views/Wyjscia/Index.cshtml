@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Książka wychodzących";
+    IEnumerable<Swp.Model.Uzytkownik> logged = ViewData["Logged"] as IEnumerable<Swp.Model.Uzytkownik>;
 }
 
 <h2>Książka wychodzących</h2>
@@ -9,37 +10,101 @@
 <p>
     <a asp-action="Create">Wypisz żołnierza</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Data wyjścia
-            </th>
-            <th>
-                Imie i nazwisko
-            </th>
-            <th>Rodzaj wyjscia
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Where(d => d.Datapowrotu == null)) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Datawyjscia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WyjsciaSlownik[item.RodzajWyjscia])
-            </td>
+@if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Data wyjścia
+                </th>
+                <th>
+                    Data powrotu
+                </th>
+                <th>
+                    Imie i nazwisko
+                </th>
+                <th>
+                    Rodzaj wyjscia
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderByDescending(a => a.Datawyjscia))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datawyjscia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datapowrotu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WyjsciaSlownik[item.RodzajWyjscia])
+                    </td>
 
-            <td>
-                <a asp-action="Powrot" asp-route-id="@item.Idwyjscia">Powrót</a>
-            </td>
-        </tr>
+                    <td>
+                        @if (item.Datapowrotu == null)
+                        {
+                            <form asp-action="Powrot" asp-route-id="@item.Idwyjscia">
+                                <input type="submit" value="Powrót" />
+                            </form>
+                        }
+                        else
+                        {
+                            <form asp-action="Delete" asp-route-id="@item.Idwyjscia">
+                                <input type="submit" value="Usuń" />
+                            </form>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
-    </tbody>
-</table>
+@if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Sluzba")
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Data wyjścia
+                </th>
+                <th>
+                    Imie i nazwisko
+                </th>
+                <th>
+                    Rodzaj wyjscia
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Where(d => d.Datapowrotu == null))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datawyjscia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdzolnierzaNavigation.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WyjsciaSlownik[item.RodzajWyjscia])
+                    </td>
+
+                    <td>
+                        <form asp-action="Powrot" asp-route-id="@item.Idwyjscia">
+                            <input type="submit" value="Powrót" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

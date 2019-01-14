@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Dane osobowe";
+    IEnumerable<Swp.Model.Uzytkownik> logged = ViewData["Logged"] as IEnumerable<Swp.Model.Uzytkownik>;
 }
 
 <h2>Dane osobowe</h2>
@@ -10,30 +11,35 @@
     <h4>@Html.DisplayFor(model => model.StopienString) @Html.DisplayFor(model => model.Imie) @Html.DisplayFor(model => model.Nazwisko)</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
             Adres zameldowania
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Adres)
         </dd>
-        <dt>
-            Imię ojca
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Imieojca)
-        </dd>
-        <dt>
-            Imię matki
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Imiematki)
-        </dd>
-        <dt>
-            PESEL
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Pesel)
-        </dd>
+        @if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+        {
+            <dt>
+                Imię ojca
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Imieojca)
+            </dd>
+            <dt>
+                Imię matki
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Imiematki)
+            </dd>
+            <dt>
+                PESEL
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Pesel)
+            </dd>
+
+        }
         <dt>
             Nr telefonu
         </dt>
@@ -47,6 +53,7 @@
             @Html.DisplayFor(model => model.IdgrupyNavigation.Idgrupy)
         </dd>
     </dl>
+        
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Idzolnierza">Edytuj</a> |

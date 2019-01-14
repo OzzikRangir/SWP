@@ -75,7 +75,7 @@ using Swp.Models;
             WriteLiteral("    <p>\r\n        ");
             EndContext();
             BeginContext(443, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18572c8608f840278b21a8e872fe6521", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "73a6b822b0024ce1ab0d4f7fee1ece00", async() => {
                 BeginContext(466, 10, true);
                 WriteLiteral("Dodaj broń");
                 EndContext();
@@ -192,7 +192,7 @@ using Swp.Models;
             WriteLiteral("                        <td>\r\n\r\n                            ");
             EndContext();
             BeginContext(1917, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09afa2b852454c10b28ab965a4d388ec", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c9d1fe31d15476fb45ccd506af375b7", async() => {
                 BeginContext(1967, 6, true);
                 WriteLiteral("Edytuj");
                 EndContext();
@@ -227,7 +227,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                            ");
             EndContext();
             BeginContext(2009, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "874692e8d1694450bccadac335746b9a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94adfee468904c099f4d2b1568aa9131", async() => {
                 BeginContext(2061, 6, true);
                 WriteLiteral(" Usuń ");
                 EndContext();

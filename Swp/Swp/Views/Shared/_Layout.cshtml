@@ -39,6 +39,7 @@
                             <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
                             <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
                             <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
+                            <li><a asp-area="" asp-controller="Grupa" asp-action="Index">Grupy</a></li>
                             <li><a asp-area="" asp-controller="Wiadomosci" asp-action="Index">Wiadomości</a></li>
                             <li><a asp-area="" asp-controller="Uzytkownicy" asp-action="Index">Użytkownicy</a></li>
                         }
@@ -47,6 +48,7 @@
                             <li><a asp-area="" asp-controller="Zolnierz" asp-action="Index">Ewidencja żołnierzy</a></li>
                             <li><a asp-area="" asp-controller="Wyjscia" asp-action="Index">Książka wychodzących</a></li>
                             <li><a asp-area="" asp-controller="Bron" asp-action="Index">Ewidencja uzbrojenia</a></li>
+                            <li><a asp-area="" asp-controller="Grupa" asp-action="Index">Grupy</a></li>
                             <li><a asp-area="" asp-controller="Wiadomosci" asp-action="Index">Wiadomości</a></li>
                         }
                         @if (((IEnumerable<Swp.Model.Uzytkownik>)ViewData["Logged"]).Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Zolnierz")
@@ -58,9 +60,11 @@
                                 .Select(a => a.Idgrupy).FirstOrDefault())">Grupa</a>
                             </li>
                             <li><a asp-area="" asp-controller="Bron" asp-action="Index">Uzbrojenie</a></li>
-                            <li><a asp-area="" asp-controller="Grupa" asp-action="Zajecia" asp-route-id="@(((IEnumerable<Swp.Model.Zolnierz>)ViewData["Soldiers"])
+                            <li>
+                                <a asp-area="" asp-controller="Grupa" asp-action="Zajecia" asp-route-id="@(((IEnumerable<Swp.Model.Zolnierz>)ViewData["Soldiers"])
                                 .Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value)
-                                .Select(a => a.Idgrupy).FirstOrDefault())">Zajęcia</a></li>
+                                .Select(a => a.Idgrupy).FirstOrDefault())">Zajęcia</a>
+                            </li>
                         }
 
                     }
