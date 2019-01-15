@@ -22,13 +22,20 @@ namespace Swp.Controllers
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
+            
             ViewData["Soldiers"] = _context.Zolnierz.Include(a => a.IduzytkownikaNavigation);
         }
 
         // GET: Sluzby
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            var swpContext = _context.Sluzba;
+            ViewData["Month"] = id;
+            if (id == null)
+            {
+                ViewData["Month"] = DateTime.Now.Month;
+            }
+            
+            var swpContext = _context.Sluzba.Include(a => a.IdzolnierzaNavigation);
             return View(await swpContext.ToListAsync());
         }
 
@@ -54,7 +61,9 @@ namespace Swp.Controllers
         // GET: Sluzby/Create
         public IActionResult Create()
         {
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza");
+            ViewData["Sluzby"] = _context.Sluzba.Include(a => a.IdzolnierzaNavigation);
+            ViewData["Rodzaje"] = new SelectList(Enumerations.SluzbySlownik, "Key", "Value");
+            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "FullName");
             return View();
         }
 
@@ -63,7 +72,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idsluzby,Idzolnierza,Datasluzby,Rodzajsluzby")] Sluzba sluzba)
+        public async Task<IActionResult> Create([Bind("Idzolnierza,Datasluzby,Rodzajsluzby")] Sluzba sluzba)
         {
             if (ModelState.IsValid)
             {
@@ -75,58 +84,6 @@ namespace Swp.Controllers
             return View(sluzba);
         }
 
-        // GET: Sluzby/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var sluzba = await _context.Sluzba.FindAsync(id);
-            if (sluzba == null)
-            {
-                return NotFound();
-            }
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza", sluzba.Idzolnierza);
-            return View(sluzba);
-        }
-
-        // POST: Sluzby/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idsluzby,Idzolnierza,Datasluzby,Rodzajsluzby")] Sluzba sluzba)
-        {
-            if (id != sluzba.Idsluzby)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(sluzba);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SluzbaExists(sluzba.Idsluzby))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["Idzolnierza"] = new SelectList(_context.Zolnierz, "Idzolnierza", "Idzolnierza", sluzba.Idzolnierza);
-            return View(sluzba);
-        }
 
         // GET: Sluzby/Delete/5
         public async Task<IActionResult> Delete(int? id)

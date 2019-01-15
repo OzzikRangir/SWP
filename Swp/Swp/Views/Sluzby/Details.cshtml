@@ -1,36 +1,35 @@
 ﻿@model Swp.Model.Sluzba
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Służba";
 }
 
-<h2>Details</h2>
-
+<h2>Służba</h2>
 <div>
-    <h4>Sluzba</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Datasluzby)
+            Data służby
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Datasluzby)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Rodzajsluzby)
+            Rodzaj służby
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Rodzajsluzby)
+            @Html.DisplayFor(model => model.Rodzaj)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+            Żołnierz pełniący służbę
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.IdzolnierzaNavigation.Idzolnierza)
+            @Html.DisplayFor(model => model.IdzolnierzaNavigation.StopienString) @Html.DisplayFor(model => model.IdzolnierzaNavigation.FullName)
         </dd>
     </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Idsluzby">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+    <form asp-action="Delete" asp-route-id="@Model.Idsluzby">
+        <input type="submit" value="Usuń" class="btn btn-link" /> |
+        <a asp-action="Index">Powrót do list</a>
+    </form>
 </div>

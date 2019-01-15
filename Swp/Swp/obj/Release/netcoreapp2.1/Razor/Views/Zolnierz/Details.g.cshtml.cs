@@ -178,7 +178,7 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n        \r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1585, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "885600d6ee8a4907b5dc539d0c7114d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af48b2ec2ac6467eb84a672e8464d4b5", async() => {
                 BeginContext(1607, 6, true);
                 WriteLiteral("Powrót");
                 EndContext();
@@ -209,7 +209,7 @@ using Swp.TagHelpers;
             WriteLiteral("        ");
             EndContext();
             BeginContext(1841, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ba9a1d4133e44d69725e4d4ebbf31dc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce17f31bf9a245c699219a0ffd26f2f7", async() => {
                 BeginContext(1896, 6, true);
                 WriteLiteral("Edytuj");
                 EndContext();

@@ -28,6 +28,15 @@ namespace Swp.Model
 };
 
 
+        public static Dictionary<int?, string> SluzbySlownik = new Dictionary<int?, string>()
+        {
+
+        {0,"Podoficer Dyżurny" },
+        {1,"Dyżurny" },
+        {2,"I POD" },
+
+
+};
 
         public static Dictionary<int, string> WyjsciaSlownik = new Dictionary<int, string>()
         {

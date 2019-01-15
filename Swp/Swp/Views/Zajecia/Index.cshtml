@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -13,10 +14,16 @@
     <thead>
         <tr>
             <th>
-               Data zajęć
+                @Html.DisplayNameFor(model => model.Datazajecia)
             </th>
             <th>
-               Grupa
+                @Html.DisplayNameFor(model => model.Nazwazajecia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Miejsce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdgrupyNavigation)
             </th>
             <th></th>
         </tr>
@@ -26,6 +33,12 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Datazajecia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwazajecia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Miejsce)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdgrupyNavigation.Idgrupy)

@@ -81,7 +81,7 @@ using Swp.TagHelpers;
             WriteLiteral("    <p>\r\n        ");
             EndContext();
             BeginContext(449, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b49a843f13c646ffb9a293530c3226e5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd39f82aed4b4159b7b4c9da660e4bfb", async() => {
                 BeginContext(472, 5, true);
                 WriteLiteral("Dodaj");
                 EndContext();
@@ -196,7 +196,7 @@ using Swp.TagHelpers;
             WriteLiteral("                        <td>\r\n\r\n                            ");
             EndContext();
             BeginContext(1749, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61be0916c2dd4d618bc577fcc6b2d82e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57a5bac7b0074725af2fdcb80ac6d79c", async() => {
                 BeginContext(1806, 10, true);
                 WriteLiteral("Informacje");
                 EndContext();
@@ -231,7 +231,7 @@ using Swp.TagHelpers;
             WriteLiteral(" |\r\n                            ");
             EndContext();
             BeginContext(1852, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f1c179f3a9a468b974b6d67f067a84b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e7be432eed14c6f86f6a5b23d2b1b28", async() => {
                 BeginContext(1906, 6, true);
                 WriteLiteral("Edytuj");
                 EndContext();
@@ -266,7 +266,7 @@ using Swp.TagHelpers;
             WriteLiteral(" |\r\n                            ");
             EndContext();
             BeginContext(1948, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "537ff708e2e84f9f847aa21dfabdee0c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31c91e531cd44ebda7191fd9d5bb540b", async() => {
                 BeginContext(2004, 4, true);
                 WriteLiteral("Usuń");
                 EndContext();
@@ -318,7 +318,7 @@ using Swp.TagHelpers;
             WriteLiteral("                        <td>\r\n\r\n                            ");
             EndContext();
             BeginContext(2365, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65a1e867d4e64df6b6d82b24ad11e536", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f586782e436140d48a2aa5ad559b658e", async() => {
                 BeginContext(2422, 10, true);
                 WriteLiteral("Informacje");
                 EndContext();

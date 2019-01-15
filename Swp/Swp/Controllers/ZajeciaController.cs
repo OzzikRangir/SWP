@@ -19,6 +19,7 @@ namespace Swp.Controllers
             _context = context;
         }
 
+
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);
@@ -63,7 +64,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idgrupy,Datazajecia")] Zajecie zajecie)
+        public async Task<IActionResult> Create([Bind("Idzajecia,Idgrupy,Datazajecia,Nazwazajecia,Miejsce")] Zajecie zajecie)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +98,7 @@ namespace Swp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idzajecia,Idgrupy,Datazajecia")] Zajecie zajecie)
+        public async Task<IActionResult> Edit(int id, [Bind("Idzajecia,Idgrupy,Datazajecia,Nazwazajecia,Miejsce")] Zajecie zajecie)
         {
             if (id != zajecie.Idzajecia)
             {

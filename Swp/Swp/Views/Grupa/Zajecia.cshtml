@@ -25,16 +25,28 @@
                 <th>
                     Data
                 </th>
+                <th>
+                    Nazwa
+                </th>
+                <th>
+                    Miejsce
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Zajecie.OrderBy(c => c.Datazajecia))
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Datazajecia)
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Datazajecia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwazajecia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Miejsce)
+                </td>
+            </tr>
             }
         </tbody>
     </table>

@@ -51,6 +51,7 @@
                             <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Wiadomosci" asp-action="Index">Wiadomości</a></li>
                             <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Pliki" asp-action="Index">Pliki</a></li>
                             <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Sluzby" asp-action="Index">Służby</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Zajecia" asp-action="Index">Zajęcia</a></li>
                         }
                         @if (((IEnumerable<Swp.Model.Uzytkownik>)ViewData["Logged"]).Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Zolnierz")
                         {
@@ -91,6 +92,7 @@
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
+        <br />
         @RenderBody()
         <hr />
         <footer>

@@ -45,9 +45,7 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zolnierz\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zolnierz\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby\Create.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby\Delete.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby\Details.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wyjazdy\Create.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wyjazdy\Delete.g.cshtml.cs
@@ -59,14 +57,7 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wyjscia\Details.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wyjscia\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wyjscia\Index.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Create.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Delete.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Details.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Edit.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.csprojAssemblyReference.cache
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Delete.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Index.g.cshtml.cs
 C:\Users\Przemek\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.csproj.CoreCompileInputs.cache
 C:\Users\Przemek\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.RazorAssemblyInfo.cache
@@ -187,3 +178,8 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Create.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Delete.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Details.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Edit.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Index.g.cshtml.cs

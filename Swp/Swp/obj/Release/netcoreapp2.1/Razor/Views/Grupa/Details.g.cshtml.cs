@@ -141,7 +141,7 @@ Write(Html.DisplayFor(model => model.Idgrupy));
             WriteLiteral("        </tbody>\r\n    </table>\r\n</div>\r\n    <div>\r\n        ");
             EndContext();
             BeginContext(897, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fd2e9a02d384a2eb680e90086398714", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17217d3054c0436882161370b546186b", async() => {
                 BeginContext(919, 6, true);
                 WriteLiteral("Powrót");
                 EndContext();

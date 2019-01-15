@@ -18,7 +18,11 @@ namespace Swp.TagHelpers
 
         public int Year { get; set; }
 
+        public string Role { get; set; }
+
         public List<Sluzba> Events { get; set; }
+
+        
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
@@ -76,6 +80,7 @@ namespace Swp.TagHelpers
                     }
 
                     var mutedClasses = "d-none d-lg-inline-block bg-light text-muted";
+
                     yield return new XElement("div",
                         new XAttribute("class", $"day col-lg p-2 border border-left-0 border-top-0 text-truncate {(d.Month != monthStart.Month ? mutedClasses : null)}"),
                         new XElement("h5",
@@ -100,18 +105,43 @@ namespace Swp.TagHelpers
 
             IEnumerable<XElement> GetEventHtml(DateTime d)
             {
-                return events?.SingleOrDefault(e => e.Key == d)?.Select(e =>
-                    new XElement("a",
-                       new XAttribute("class", $"event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"),
-                        new XAttribute("title", e.Rodzajsluzby),
-                        e.Rodzajsluzby
-                    )
-                ) ?? new[] {
+                if( Role == "Administrator" || Role == "Sluzba") {
+                    return events?.SingleOrDefault(e => e.Key == d)?.Select(e =>
+        new XElement("a",
+
+           new XAttribute("class", $"event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-{e.Kolor} text-white"),
+            new XAttribute("title", e.IdzolnierzaNavigation.FullName),
+            new XAttribute("href", $"/Sluzby/Details/{e.Idsluzby}"),
+            e.Rodzaj
+        )
+
+    ) ?? new[] {
                 new XElement("p",
                     new XAttribute("class", "d-lg-none"),
                     "No events"
                 )
-                };
+    };
+                }
+                else
+                {
+                    return events?.SingleOrDefault(e => e.Key == d)?.Select(e =>
+        new XElement("a",
+
+           new XAttribute("class", $"event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-{e.Kolor} text-white"),
+            new XAttribute("title", e.IdzolnierzaNavigation.FullName),
+            
+            e.Rodzaj
+        )
+
+    ) ?? new[] {
+                new XElement("p",
+                    new XAttribute("class", "d-lg-none"),
+                    "No events"
+                )
+    };
+
+                }
+
             }
         }
     }

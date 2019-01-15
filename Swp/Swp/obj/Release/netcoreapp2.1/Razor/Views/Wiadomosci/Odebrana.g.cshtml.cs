@@ -123,12 +123,12 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n        </dd>\r\n\r\n    </dl>\r\n</div>\r\n");
             EndContext();
             BeginContext(871, 188, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c3f949c2e634cb5b9240eb301168075", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3fb33a855fa04d1ab621ce5ed9269b76", async() => {
                 BeginContext(932, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(938, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "95c36c7c8f154cf5ad9079523b7cd807", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8fde6bb5bd76490b8402abc75763effa", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -185,7 +185,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral("\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1072, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "29bef55548404ab9804980ad4de15ba1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c17351e1f3f94b7787d71bd5d15e0ecd", async() => {
                 BeginContext(1097, 20, true);
                 WriteLiteral("Powrót do odebranych");
                 EndContext();

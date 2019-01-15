@@ -81,7 +81,8 @@ namespace Swp.Model
             modelBuilder.Entity<Sluzba>(entity =>
             {
                 entity.Property(e => e.Idsluzby).ValueGeneratedNever();
-
+                entity.Property(e => e.Datasluzby).IsUnicode(false);
+                entity.Property(e => e.Rodzajsluzby).IsUnicode(false);
                 entity.HasOne(d => d.IdzolnierzaNavigation)
                     .WithMany(p => p.Sluzba)
                     .HasForeignKey(d => d.Idzolnierza)

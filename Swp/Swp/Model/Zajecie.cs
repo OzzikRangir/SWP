@@ -17,6 +17,13 @@ namespace Swp.Model
         public string Idgrupy { get; set; }
         [Column("DATAZAJECIA", TypeName = "datetime")]
         public DateTime? Datazajecia { get; set; }
+        [Column("NAZWAZAJECIA")]
+        [StringLength(20)]
+        public string Nazwazajecia { get; set; }
+        [Column("MIEJSCE")]
+        [StringLength(10)]
+        public string Miejsce { get; set; }
+
 
         [ForeignKey("Idgrupy")]
         [InverseProperty("Zajecie")]
