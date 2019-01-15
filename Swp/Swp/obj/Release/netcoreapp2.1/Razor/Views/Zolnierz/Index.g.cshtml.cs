@@ -23,8 +23,13 @@ using Swp.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Student\Source\Repos\SWP\Swp\Swp\Views\_ViewImports.cshtml"
+using Swp.TagHelpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"edb1e832b29e7b0cc4b49eb4e126bbfded588e01", @"/Views/Zolnierz/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b50c99fbef0e2a1d4ad52be2cb351b10343a99c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fb2b80837ff6c0e038ad6b02718e265b887074a0", @"/Views/_ViewImports.cshtml")]
     public class Views_Zolnierz_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Swp.Model.Zolnierz>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -76,7 +81,7 @@ using Swp.Models;
             WriteLiteral("    <p>\r\n        ");
             EndContext();
             BeginContext(449, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1723787a0f9c479eac5b3d6e846c4db2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b49a843f13c646ffb9a293530c3226e5", async() => {
                 BeginContext(472, 5, true);
                 WriteLiteral("Dodaj");
                 EndContext();
@@ -191,7 +196,7 @@ using Swp.Models;
             WriteLiteral("                        <td>\r\n\r\n                            ");
             EndContext();
             BeginContext(1749, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46ff00db6fe54f64b0dc663cae38e7bf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61be0916c2dd4d618bc577fcc6b2d82e", async() => {
                 BeginContext(1806, 10, true);
                 WriteLiteral("Informacje");
                 EndContext();
@@ -226,7 +231,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                            ");
             EndContext();
             BeginContext(1852, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04390c8168324348aa545053bf14a0a4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f1c179f3a9a468b974b6d67f067a84b", async() => {
                 BeginContext(1906, 6, true);
                 WriteLiteral("Edytuj");
                 EndContext();
@@ -261,7 +266,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                            ");
             EndContext();
             BeginContext(1948, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "994ff00bb2d24083bdd19f455dedf602", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "537ff708e2e84f9f847aa21dfabdee0c", async() => {
                 BeginContext(2004, 4, true);
                 WriteLiteral("Usuń");
                 EndContext();
@@ -313,7 +318,7 @@ using Swp.Models;
             WriteLiteral("                        <td>\r\n\r\n                            ");
             EndContext();
             BeginContext(2365, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ba7778d5db840ddb8dccda2cecda7e0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65a1e867d4e64df6b6d82b24ad11e536", async() => {
                 BeginContext(2422, 10, true);
                 WriteLiteral("Informacje");
                 EndContext();

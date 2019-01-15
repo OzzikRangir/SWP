@@ -23,13 +23,18 @@ using Swp.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Student\Source\Repos\SWP\Swp\Swp\Views\_ViewImports.cshtml"
+using Swp.TagHelpers;
+
+#line default
+#line hidden
 #line 2 "C:\Users\Student\Source\Repos\SWP\Swp\Swp\Views\Pliki\Index.cshtml"
 using System.IO;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c5d95a036611ed442c769e102c31cfda5d139391", @"/Views/Pliki/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b50c99fbef0e2a1d4ad52be2cb351b10343a99c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fb2b80837ff6c0e038ad6b02718e265b887074a0", @"/Views/_ViewImports.cshtml")]
     public class Views_Pliki_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Swp.Models.FilesViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Upload", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -86,7 +91,7 @@ using System.IO;
             WriteLiteral("    <p>\r\n        ");
             EndContext();
             BeginContext(636, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5715d475c6a44e7db8d56a3a6b357dd5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75836097b12b41fbb44ca2ec8a3c6ef3", async() => {
                 BeginContext(659, 5, true);
                 WriteLiteral("Dodaj");
                 EndContext();
@@ -155,12 +160,12 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
             WriteLiteral("                    <td>\r\n\r\n                        ");
             EndContext();
             BeginContext(1716, 797, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e00715042a3841809c488dad9e61d0d5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "beda8972654846779d1df67eb9b41ebc", async() => {
                 BeginContext(1768, 122, true);
                 WriteLiteral("\r\n                            <input type=\"submit\" value=\"Usuń\" class=\"btn btn-default\" /> |\r\n                            ");
                 EndContext();
                 BeginContext(1890, 94, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f065802a14d4a74a8172ce437397b95", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed2420dda93d489eb8cb54113420421b", async() => {
                     BeginContext(1973, 7, true);
                     WriteLiteral("Pobierz");
                     EndContext();
@@ -204,7 +209,7 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
 #line default
 #line hidden
                 BeginContext(2410, 59, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2de902e983448e0a6443c2c6ed6bc99", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2cf6bef2763843f0bd367bb13fe015a7", async() => {
                     BeginContext(2457, 8, true);
                     WriteLiteral("Wyświetl");
                     EndContext();
@@ -286,7 +291,7 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
             WriteLiteral("                    <td>\r\n                        ");
             EndContext();
             BeginContext(2656, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "784e455cf99741bb84ab64c0c3da56f2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c7ed889260544bdd8633da1bc56c9af5", async() => {
                 BeginContext(2704, 7, true);
                 WriteLiteral("Pobierz");
                 EndContext();
@@ -330,7 +335,7 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
 #line default
 #line hidden
             BeginContext(3044, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2e0fc6212f44fb19820beaa9016c28d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bcb280c6cfa47ba90e82ed06ed8b36e", async() => {
                 BeginContext(3091, 8, true);
                 WriteLiteral("Wyświetl");
                 EndContext();

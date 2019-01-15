@@ -56,6 +56,10 @@
         
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Idzolnierza">Edytuj</a> |
-    <a asp-action="Index">Powrót</a>
+    <a asp-action="Index">Powrót</a> |
+    @if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator")
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Idzolnierza">Edytuj</a>
+    }
+
 </div>

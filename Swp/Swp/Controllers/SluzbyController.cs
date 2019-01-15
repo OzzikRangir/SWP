@@ -28,7 +28,7 @@ namespace Swp.Controllers
         // GET: Sluzby
         public async Task<IActionResult> Index()
         {
-            var swpContext = _context.Sluzba.Include(s => s.IdzolnierzaNavigation);
+            var swpContext = _context.Sluzba;
             return View(await swpContext.ToListAsync());
         }
 

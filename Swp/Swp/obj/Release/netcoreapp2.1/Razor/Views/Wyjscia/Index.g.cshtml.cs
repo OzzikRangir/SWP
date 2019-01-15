@@ -23,8 +23,13 @@ using Swp.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Student\Source\Repos\SWP\Swp\Swp\Views\_ViewImports.cshtml"
+using Swp.TagHelpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dd4a02f6e2f1775909447a4a9fa7e9fa0d1ade86", @"/Views/Wyjscia/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b50c99fbef0e2a1d4ad52be2cb351b10343a99c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fb2b80837ff6c0e038ad6b02718e265b887074a0", @"/Views/_ViewImports.cshtml")]
     public class Views_Wyjscia_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Swp.Model.Wyjscie>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,7 +73,7 @@ using Swp.Models;
             WriteLiteral("\r\n<h2>Książka wychodzących</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(246, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1dc8515c8f634f4d97482ccd047ff5ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "647ecd0e624b484ba8cfdbb87708835c", async() => {
                 BeginContext(269, 16, true);
                 WriteLiteral("Wypisz żołnierza");
                 EndContext();
@@ -176,7 +181,7 @@ using Swp.Models;
             WriteLiteral("                            ");
             EndContext();
             BeginContext(1767, 166, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2efae0760f694a0a8c45004b9c381902", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7bc000fc5a184deaaf6f6874ec3b193b", async() => {
                 BeginContext(1824, 102, true);
                 WriteLiteral("\r\n                                <input type=\"submit\" value=\"Powrót\" />\r\n                            ");
                 EndContext();
@@ -223,7 +228,7 @@ using Swp.Models;
             WriteLiteral("                            ");
             EndContext();
             BeginContext(2047, 164, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c54ec5eb4fe489e8ca393e43270eae7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "158d97828e674b0eb88f0734a267001b", async() => {
                 BeginContext(2104, 100, true);
                 WriteLiteral("\r\n                                <input type=\"submit\" value=\"Usuń\" />\r\n                            ");
                 EndContext();
@@ -345,7 +350,7 @@ using Swp.Models;
             WriteLiteral("\r\n                    </td>\r\n\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(3509, 158, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9396fc6548a84185b58a93aaaa8ec5b2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c400c60b6cab4759bf80184ca52326b4", async() => {
                 BeginContext(3566, 94, true);
                 WriteLiteral("\r\n                            <input type=\"submit\" value=\"Powrót\" />\r\n                        ");
                 EndContext();

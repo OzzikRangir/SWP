@@ -1,0 +1,36 @@
+﻿@model Swp.Model.Sluzba
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sluzba</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Datasluzby)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datasluzby)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rodzajsluzby)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rodzajsluzby)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdzolnierzaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdzolnierzaNavigation.Idzolnierza)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Idsluzby">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

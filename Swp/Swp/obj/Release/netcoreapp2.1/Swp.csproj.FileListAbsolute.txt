@@ -8,7 +8,6 @@ C:\Users\Student\source\repos\SWP\Swp\Swp\bin\Release\netcoreapp2.1\Swp.Views.pd
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.csproj.CoreCompileInputs.cache
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.RazorAssemblyInfo.cache
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.RazorAssemblyInfo.cs
-C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.AssemblyInfoInputs.cache
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.AssemblyInfo.cs
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.TagHelpers.input.cache
@@ -157,15 +156,6 @@ C:\Users\Przemek\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\
 C:\Users\Przemek\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Przemek\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Przemek\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Index.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Uzytkownicy\Create.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Uzytkownicy\Delete.g.cshtml.cs
@@ -182,3 +172,18 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Upload.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Read.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby - Copy\Create.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby - Copy\Delete.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby - Copy\Details.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby - Copy\Edit.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Sluzby - Copy\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
