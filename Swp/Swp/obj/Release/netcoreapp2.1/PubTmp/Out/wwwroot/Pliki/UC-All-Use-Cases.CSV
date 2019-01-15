@@ -1,0 +1,68 @@
+"UC Tag","Requirement text","Name","Property","Priority","Stability","Difficulty","Affects Architecture","Acceptance Criteria","Assigned To","Planned Iteration or Version","Actual Iteration or Version","CQ Requirement","CQ Test Case","CQ Configured Test Case","EnhancementRequest","Defect","Status","Revision Notification","Obsolete [1 - Flt:Y Srt:N]","Unique ID","Location","Package","Author","Revision","Date","Reason","Traced-from","Traced-to","RootTag#"
+"UC1","Po zalogowaniu aktor musi wybraæ zak³adkê grupy a nastêpnie wybraæ konkretn¹ grupê oraz opcjê jej modyfikacji.","Zmodyfikuj grupy","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","1","Database","06 - Use Cases","Patryk Baran","1.0000","2018-11-28 18:18","Requirement created. 
+NAME: <no entry> - Zmodyfikuj grupy. 
+PLANNED ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+PRIORITY: <no entry> - Medium. (Change caused suspect) 
+DIFFICULTY: <no entry> - Medium. (Change caused suspect) 
+PROPERTY: <no entry> - Name. 
+OBSOLETE: <no entry> - False. 
+STABILITY: <no entry> - Medium. 
+ACTUAL ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+AFFECTS ARCHITECTURE: <no entry> - False. (Change caused suspect) 
+STATUS: <no entry> - Defined. (Change caused suspect) 
+ASSIGNED TO: <no entry> - Unassigned. 
+REQTEXT: Po zalogowaniu aktor musi wybraæ zak³adkê grupy a nastêpnie wybraæ konkretn¹ grupê oraz opcjê jej modyfikacji.","","","1"
+"UC2","Po zalogowaniu aktor musi wybraæ zak³adkê grupy a nastêpnie wybraæ konkretn¹ grupê. Po tej operacji zostanie wywietlona lista ¿o³nierzy do niej nale¿¹cych.","Wywietl ¿o³nierzy grupy","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","3","Database","06 - Use Cases","Patryk Baran","1.0001","2018-11-28 18:27","Requirement type changed. Tag was changed from BR2 to UC2.","","","2"
+"UC3","Po zalogowaniu aktor musi wybraæ zak³adkê grupy. Po tej operacji zostanie wywietlona lista grup.","Wywietl listê grup","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","2","Database","06 - Use Cases","Patryk Baran","1.0001","2018-11-28 18:27","Requirement type changed. Tag was changed from BR1 to UC3.","","","3"
+"UC4","Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpniez podzak³adkê odebrane. Po wybraniu podzak³adki zostanie wywietlona  lista wiadomoci odebranych. Aby wywietliæ wiadmoæ aktor musi wybraæ wiadomoæ któr¹ chce wywietliæ.","Wywietl wiadomoæ odebran¹","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","4","Database","06 - Use Cases","Patryk Baran","1.0000","2018-11-28 18:44","Requirement created. 
+NAME: <no entry> - Wywietl wiadomoæ odebran¹. 
+PLANNED ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+PRIORITY: <no entry> - Medium. (Change caused suspect) 
+DIFFICULTY: <no entry> - Medium. (Change caused suspect) 
+PROPERTY: <no entry> - Name. 
+OBSOLETE: <no entry> - False. 
+STABILITY: <no entry> - Medium. 
+ACTUAL ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+AFFECTS ARCHITECTURE: <no entry> - False. (Change caused suspect) 
+STATUS: <no entry> - Defined. (Change caused suspect) 
+ASSIGNED TO: <no entry> - Unassigned. 
+REQTEXT: Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpniez podzak³adkê odebrane. Po wybraniu podzak³adki zostanie wywietlona  lista wiadomoci odebranych. Aby wywietliæ wiadmoæ aktor musi wybraæ wiadomoæ któr¹ chce wywietliæ.","","","4"
+"UC5","Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpnie podzak³adkê wys³ane. Po wybraniu podzak³adki zostanie wywietlona  lista wiadomoci wys³anych. Aby wywietliæ wiadmoæ aktor musi wybraæ wiadomoæ któr¹ chce wywietliæ.","Wywietl wiadomoæ wys³an¹","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","5","Database","06 - Use Cases","Patryk Baran","1.0000","2018-11-28 18:50","Requirement created. 
+NAME: <no entry> - Wywietl wiadomoæ wys³an¹. 
+PLANNED ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+PRIORITY: <no entry> - Medium. (Change caused suspect) 
+DIFFICULTY: <no entry> - Medium. (Change caused suspect) 
+PROPERTY: <no entry> - Name. 
+OBSOLETE: <no entry> - False. 
+STABILITY: <no entry> - Medium. 
+ACTUAL ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+AFFECTS ARCHITECTURE: <no entry> - False. (Change caused suspect) 
+STATUS: <no entry> - Defined. (Change caused suspect) 
+ASSIGNED TO: <no entry> - Unassigned. 
+REQTEXT: Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpnie podzak³adkê wys³ane. Po wybraniu podzak³adki zostanie wywietlona  lista wiadomoci wys³anych. Aby wywietliæ wiadmoæ aktor musi wybraæ wiadomoæ któr¹ chce wywietliæ.","","","5"
+"UC6","Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpnie podzak³adkê wylij. Zostanie wywietlony formularz wysy³ania wiadomoci.","Wylij wiadomoæ","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","6","Database","06 - Use Cases","Patryk Baran","1.0000","2018-11-28 18:51","Requirement created. 
+NAME: <no entry> - Wylij wiadomoæ. 
+PLANNED ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+PRIORITY: <no entry> - Medium. (Change caused suspect) 
+DIFFICULTY: <no entry> - Medium. (Change caused suspect) 
+PROPERTY: <no entry> - Name. 
+OBSOLETE: <no entry> - False. 
+STABILITY: <no entry> - Medium. 
+ACTUAL ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+AFFECTS ARCHITECTURE: <no entry> - False. (Change caused suspect) 
+STATUS: <no entry> - Defined. (Change caused suspect) 
+ASSIGNED TO: <no entry> - Unassigned. 
+REQTEXT: Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpnie podzak³adkê wylij. Zostanie wywietlony formularz wysy³ania wiadomoci.","","","6"
+"UC7","Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpniez podzak³adkê odebrane. Po wybraniu podzak³adki zostanie wywietlona  lista wiadomoci odebranych. Aby usun¹æ wiadmoæ aktor musi wybraæ konkretn¹ wiadomoæ któr¹ chce usun¹æ. Wiadomoæ zostanie wywietlona gdzie bêdzie mo¿liwoæ jej usuniêcia.","Usuñ wiadomoæ","Name","Medium","Medium","Medium","False","","Unassigned","Undefined","Undefined","","","","","","Defined","","False","7","Database","06 - Use Cases","Patryk Baran","1.0000","2018-11-28 18:52","Requirement created. 
+NAME: <no entry> - Usuñ wiadomoæ. 
+PLANNED ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+PRIORITY: <no entry> - Medium. (Change caused suspect) 
+DIFFICULTY: <no entry> - Medium. (Change caused suspect) 
+PROPERTY: <no entry> - Name. 
+OBSOLETE: <no entry> - False. 
+STABILITY: <no entry> - Medium. 
+ACTUAL ITERATION OR VERSION: <no entry> - Undefined. (Change caused suspect) 
+AFFECTS ARCHITECTURE: <no entry> - False. (Change caused suspect) 
+STATUS: <no entry> - Defined. (Change caused suspect) 
+ASSIGNED TO: <no entry> - Unassigned. 
+REQTEXT: Po zalogowaniu aktor musi wybraæ zak³adkê wiadomoci, nastêpniez podzak³adkê odebrane. Po wybraniu podzak³adki zostanie wywietlona  lista wiadomoci odebranych. Aby usun¹æ wiadmoæ aktor musi wybraæ konkretn¹ wiadomoæ któr¹ chce usun¹æ. Wiadomoæ zostanie wywietlona gdzie bêdzie mo¿liwoæ jej usuniêcia.","","","7"

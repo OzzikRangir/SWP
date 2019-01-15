@@ -68,7 +68,7 @@ using Swp.Models;
             WriteLiteral("\r\n<h2>Lista grup</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(219, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6602be1dc7d488d92729697f3cbdd93", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a19faf86c1664f3da73837af48f4032f", async() => {
                 BeginContext(242, 11, true);
                 WriteLiteral("Dodaj grupę");
                 EndContext();
@@ -127,7 +127,7 @@ using Swp.Models;
             WriteLiteral("                <td>\r\n\r\n                    ");
             EndContext();
             BeginContext(975, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0be5cdbf77c49e88c59528802c605b1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80e0f9f7517e4cf4b3bba39c2586519d", async() => {
                 BeginContext(1025, 12, true);
                 WriteLiteral("Edytuj nazwę");
                 EndContext();
@@ -162,7 +162,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1065, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58054616a8314080a6b28a4fbaaa48a5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27cc5863570d4f16a5e6c35adce529eb", async() => {
                 BeginContext(1118, 11, true);
                 WriteLiteral("Lista grupy");
                 EndContext();
@@ -197,7 +197,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1157, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8f1ee264868741008794364cc5188867", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e1237b9c42d04cffa574d3cdf525f7c8", async() => {
                 BeginContext(1210, 13, true);
                 WriteLiteral("Zajęcia grupy");
                 EndContext();
@@ -232,7 +232,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1251, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "814c9dccb1f4440586c27eb82ceca9e5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "095f27465bbb40579e02192bdf73a4d5", async() => {
                 BeginContext(1303, 4, true);
                 WriteLiteral("Usuń");
                 EndContext();
@@ -284,7 +284,7 @@ using Swp.Models;
             WriteLiteral("                <td>\r\n                    ");
             EndContext();
             BeginContext(1614, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c62b71acdc394e88a197dc4042b8c059", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "403a61b7e9ff4724a9f206f1787b5568", async() => {
                 BeginContext(1667, 11, true);
                 WriteLiteral("Lista grupy");
                 EndContext();
@@ -319,7 +319,7 @@ using Swp.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1706, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05d80e9f54f54d8f80234ba4b4467ba0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7b611d9da034c36a39643e46b57575f", async() => {
                 BeginContext(1759, 13, true);
                 WriteLiteral("Zajęcia grupy");
                 EndContext();

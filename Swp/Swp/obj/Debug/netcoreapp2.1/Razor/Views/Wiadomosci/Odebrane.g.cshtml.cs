@@ -132,7 +132,7 @@ using Swp.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(953, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb29a966b9944f86978cb86d90f19c2b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2a83ecb10ff41f3a84b5e70f2dffbd6", async() => {
                 BeginContext(1012, 8, true);
                 WriteLiteral("Wyświetl");
                 EndContext();
@@ -175,7 +175,7 @@ using Swp.Models;
             WriteLiteral("        </tbody>\r\n</table>\r\n");
             EndContext();
             BeginContext(1107, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7c2167f76024e18843849a606811ad6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "294faef18e1642e2829ce2380070e06a", async() => {
                 BeginContext(1129, 20, true);
                 WriteLiteral("Powrót do wiadomości");
                 EndContext();

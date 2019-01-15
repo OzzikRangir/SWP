@@ -66,14 +66,7 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Zajecia\Index.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.csprojAssemblyReference.cache
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Create.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Delete.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Details.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Edit.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Odebrane\Index.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Create.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Delete.g.cshtml.cs
-C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Details.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Index.g.cshtml.cs
 C:\Users\Przemek\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Swp.csproj.CoreCompileInputs.cache
@@ -180,3 +173,12 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Uzytkownicy\Edit.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Uzytkownicy\Index.g.cshtml.cs
 C:\Users\Student\source\repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Grupa\Zajecia.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Odebrana.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Odebrane.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Utworz.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Wyslana.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Wiadomosci\Wyslane.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Files.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Upload.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Release\netcoreapp2.1\Razor\Views\Pliki\Read.g.cshtml.cs

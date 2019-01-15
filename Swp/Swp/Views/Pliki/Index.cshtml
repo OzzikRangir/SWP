@@ -1,0 +1,86 @@
+﻿@model Swp.Models.FilesViewModel
+@using System.IO
+
+@{
+    ViewData["Title"] = "Pliki";
+
+    IEnumerable<Swp.Model.Uzytkownik> logged = ViewData["Logged"] as IEnumerable<Swp.Model.Uzytkownik>;
+}
+
+<h2>Pliki</h2>
+
+@if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator" ||
+  logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Sluzba")
+{
+    <p>
+        <a asp-action="Upload">Dodaj</a>
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa
+            </th>
+            <th>
+                Dodano
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Files.OrderByDescending(f => f.Date))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                @if (logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator" ||
+logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Sluzba")
+                {
+                    <td>
+
+                        <form asp-action="Delete" asp-route-id="@item.Name">
+                            <input type="submit" value="Usuń" class="btn btn-default" /> |
+                            <a asp-action="Download"
+                               asp-route-id="@item.Name">Pobierz</a> |
+                            @if (System.IO.Path.GetExtension(item.Path).ToLower() == ".doc" ||
+                                    System.IO.Path.GetExtension(item.Path).ToLower() == ".docx" ||
+                                    System.IO.Path.GetExtension(item.Path).ToLower() == ".xls" ||
+                                    System.IO.Path.GetExtension(item.Path).ToLower() == ".xlsx")
+                            {<a asp-action="Read" asp-route-id="@item.Name">Wyświetl</a>}
+
+
+
+
+
+                        </form>
+
+
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Index" asp-route-id="@item.Name">Pobierz</a>
+                        @if (System.IO.Path.GetExtension(item.Path).ToLower() == ".doc" ||
+       System.IO.Path.GetExtension(item.Path).ToLower() == ".docx" ||
+       System.IO.Path.GetExtension(item.Path).ToLower() == ".xls" ||
+       System.IO.Path.GetExtension(item.Path).ToLower() == ".xlsx")
+                        {<a asp-action="Read" asp-route-id="@item.Name">Wyświetl</a>}
+
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+

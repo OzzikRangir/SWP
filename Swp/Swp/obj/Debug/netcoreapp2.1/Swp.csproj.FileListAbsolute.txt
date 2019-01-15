@@ -164,3 +164,6 @@ C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wi
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Odebrana.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Wyslana.g.cshtml.cs
 C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Wiadomosci\Utworz.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Pliki\Files.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Pliki\Index.g.cshtml.cs
+C:\Users\Student\Source\Repos\SWP\Swp\Swp\obj\Debug\netcoreapp2.1\Razor\Views\Pliki\Upload.g.cshtml.cs

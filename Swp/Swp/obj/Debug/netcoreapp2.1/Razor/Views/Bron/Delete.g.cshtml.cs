@@ -88,12 +88,12 @@ using Swp.Models;
             WriteLiteral("</h4>\r\n\r\n    ");
             EndContext();
             BeginContext(211, 204, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc945b46978d4df5868d7a6fcff41b26", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c8b696d93ef447aca70af2c808b59d8b", async() => {
                 BeginContext(237, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(247, 41, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90800d92c11e4a05b1e1d5e5ad724fa9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9b87283cbd094c6eb6f6aeb6615d4fd1", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -118,7 +118,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Usuń\" class=\"btn btn-default\" /> |\r\n        ");
                 EndContext();
                 BeginContext(370, 32, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccfcb23629484e179f64944e50334472", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a62c7a1e5c84ae1a916097d96a6ad26", async() => {
                     BeginContext(392, 6, true);
                     WriteLiteral("Powrót");
                     EndContext();

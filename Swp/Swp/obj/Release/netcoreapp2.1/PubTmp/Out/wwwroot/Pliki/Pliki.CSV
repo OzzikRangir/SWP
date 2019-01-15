@@ -1,0 +1,5 @@
+"UC Tag","Requirement text","Name","Author","Date","Unique ID"
+"UC4","Po zalogowaniu aktor wybiera zak³adkê pliki. Nastêpnie wybiera opcjê dodania pliku. Aktor wype³nia formularz dodania pliku i zatwierdza zmiany.","Dodaj plik","Grzesznik","2018-11-28 18:39","4"
+"UC5","Aktor po zalogowaniu przechodzi do zak³adki pliki. Nastêpnie wybiera opcjê usuñ plik. Zaznacza plik do usuniêcia i potwierdza wybór","Usuñ plik","Grzesznik","2018-11-28 18:41","5"
+"UC6","Aktror po zalogowaniu przechodzi do zak³adki pliki. Natêpnia wybiera plik z listy i wybiera opcjê wywietl plik","Wywietl plik","Grzesznik","2018-11-28 18:43","6"
+"UC7","Aktor po zalogowaniu wybiera zak³adkê pliki. Nastepnie wybiera plik z listy oraz opcjê pobierz plik. Nastêpnie aktor wybiera miejsce zapisu pliku.","Pobierz plik","Grzesznik","2018-11-28 18:44","7"

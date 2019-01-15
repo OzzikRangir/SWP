@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Swp.Identity;
 using Swp.Model;
 
@@ -40,6 +42,18 @@ namespace Swp
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            var path = Path.Combine(
+   Directory.GetCurrentDirectory(), "wwwroot", "pliki");
+
+            if (!System.IO.Directory.Exists(path))
+            {
+                System.IO.Directory.CreateDirectory(path);
+            }
+            services.AddSingleton<IFileProvider>(
+            new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "pliki")));
+
 
             services.AddSession(options => options.Cookie.HttpOnly = true);
 
@@ -91,7 +105,7 @@ namespace Swp
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
-            
+           
 
             app.UseAuthentication();
 

@@ -137,7 +137,7 @@ Write(Html.DisplayFor(model => model.Idgrupy));
             WriteLiteral("        </tbody>\r\n    </table>\r\n</div>\r\n    <div>\r\n        ");
             EndContext();
             BeginContext(897, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "20631b539c0d4b28b4c971d29f1d8481", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7293b7599e1746f9926254ce2b2f1e49", async() => {
                 BeginContext(948, 6, true);
                 WriteLiteral("Edytuj");
                 EndContext();
@@ -172,7 +172,7 @@ Write(Html.DisplayFor(model => model.Idgrupy));
             WriteLiteral(" |\r\n        ");
             EndContext();
             BeginContext(970, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e1451b69a9864dcbb000c68e25c8a18b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cad4fbe8ec8548d5a2dd4f855f2edece", async() => {
                 BeginContext(992, 6, true);
                 WriteLiteral("Powrót");
                 EndContext();

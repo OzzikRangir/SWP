@@ -1,0 +1,48 @@
+﻿@model Swp.Models.FilesViewModel
+
+@{
+    ViewData["Title"] = "Pliki";
+}
+
+<h2>Pliki</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa
+            </th>
+            <th>
+                Dodano
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Files.OrderByDescending(f => f.Date))
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                
+                <form asp-action="Delete" asp-route-filename="@item.Name">
+                    <a asp-action="Read" asp-route-filename="@item.Name">Wyświetl</a> |
+                    <a asp-action="Download"
+                       asp-route-filename="@item.Name">Pobierz</a> | 
+                    <input type="submit" value="Usuń" class="btn btn-default" />
+
+
+
+                </form> 
+
+
+</td>
+        </tr>
+        }
+    </tbody>
+</table>
