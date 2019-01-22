@@ -16,6 +16,7 @@
             <div class="form-group">
                 <label asp-for="Idgrupy" class="control-label">Nr grupy</label>
                 <select asp-for="Idgrupy" class="form-control" asp-items="ViewBag.Idgrupy"></select>
+
                 <span asp-validation-for="Idgrupy" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -59,7 +60,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Iduzytkownika" class="control-label">Uzytkownik</label>
-                <select asp-for="Iduzytkownika" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Uzytkownicy"];"></select>
+                <select asp-for="Iduzytkownika" class="form-control" asp-items="(IEnumerable<SelectListItem>)@ViewData["Uzytkownicy"];"><option value="">Brak</option></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Zapisz" class="btn btn-link" />

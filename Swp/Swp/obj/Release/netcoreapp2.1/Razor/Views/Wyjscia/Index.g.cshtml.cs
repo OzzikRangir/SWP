@@ -73,7 +73,7 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n<h2>Książka wychodzących</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(246, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75732de1ce5449d994557d751ab48d60", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "709fbe7e594743da8095579ce0e7c1f7", async() => {
                 BeginContext(269, 16, true);
                 WriteLiteral("Wypisz żołnierza");
                 EndContext();
@@ -181,7 +181,7 @@ using Swp.TagHelpers;
             WriteLiteral("                            ");
             EndContext();
             BeginContext(1767, 166, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bca02b19a614d66a3bfb7eb072172d3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15e5a2e9d5c34428b44586cdea363022", async() => {
                 BeginContext(1824, 102, true);
                 WriteLiteral("\r\n                                <input type=\"submit\" value=\"Powrót\" />\r\n                            ");
                 EndContext();
@@ -228,7 +228,7 @@ using Swp.TagHelpers;
             WriteLiteral("                            ");
             EndContext();
             BeginContext(2047, 164, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76367d7103044e1a950dfa9704db6e5e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b06d2f6d226e493d812e6dcfc5ec3c3a", async() => {
                 BeginContext(2104, 100, true);
                 WriteLiteral("\r\n                                <input type=\"submit\" value=\"Usuń\" />\r\n                            ");
                 EndContext();
@@ -350,7 +350,7 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n                    </td>\r\n\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(3509, 158, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ccffd440e3a4e2c93b2a61d213e3cac", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5fdc9c2996446ff80db66d281cf8ca1", async() => {
                 BeginContext(3566, 94, true);
                 WriteLiteral("\r\n                            <input type=\"submit\" value=\"Powrót\" />\r\n                        ");
                 EndContext();

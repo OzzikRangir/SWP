@@ -60,7 +60,7 @@ using Swp.TagHelpers;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 203, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d7a9dfcd44946998ca75caa613ea12d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2213c3906474727942b284de6a5f2c1", async() => {
                 BeginContext(100, 96, true);
                 WriteLiteral("\r\n\r\n    <input type=\"file\" name=\"files\" multiple />\r\n    <button type=\"submit\">Wyślij</button>\r\n");
                 EndContext();

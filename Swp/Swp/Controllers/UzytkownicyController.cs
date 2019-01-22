@@ -155,6 +155,7 @@ namespace Swp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var uzytkownik = await _context.Uzytkownik.FindAsync(id);
+
             _context.Uzytkownik.Remove(uzytkownik);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

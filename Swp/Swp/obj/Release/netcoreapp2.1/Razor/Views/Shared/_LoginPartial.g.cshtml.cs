@@ -88,7 +88,7 @@ using Swp.Model;
             WriteLiteral("    ");
             EndContext();
             BeginContext(197, 704, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b05ea65e3fd34c519a5ff4a7211d4aab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ac30a8c17cd46fe9b5b36b114b1c6eb", async() => {
                 BeginContext(325, 137, true);
                 WriteLiteral("\r\n        <ul class=\"nav navbar-nav navbar-right mr-auto\">\r\n\r\n            <li class=\"nav-item\"><a class=\"nav-link\">\r\n                    ");
                 EndContext();
@@ -146,7 +146,7 @@ else
             WriteLiteral("    <ul class=\"nav navbar-nav navbar-right\">\r\n        <li class=\"nav-item\">");
             EndContext();
             BeginContext(990, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b36ee9593334a62b81f1c31cc647af8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5fe6a943462a4265a47ea7e180d161a8", async() => {
                 BeginContext(1059, 11, true);
                 WriteLiteral("Zarejestruj");
                 EndContext();
@@ -171,7 +171,7 @@ else
             WriteLiteral("</li>\r\n        <li class=\"nav-item\">");
             EndContext();
             BeginContext(1110, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d56577977d2241b9abe77a36ee5d4c62", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3c36d284eac4486ad4b0a16b8dc949f", async() => {
                 BeginContext(1176, 7, true);
                 WriteLiteral("Zaloguj");
                 EndContext();

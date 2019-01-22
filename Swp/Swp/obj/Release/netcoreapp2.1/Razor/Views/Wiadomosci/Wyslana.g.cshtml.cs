@@ -118,7 +118,7 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n        </dd>\r\n\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(882, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10f9729ca3b34ffdbaeb92c7653a4053", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "232055c42d334bb68b6225d66a3d7bf1", async() => {
                 BeginContext(906, 19, true);
                 WriteLiteral("Powrót do wysłanych");
                 EndContext();

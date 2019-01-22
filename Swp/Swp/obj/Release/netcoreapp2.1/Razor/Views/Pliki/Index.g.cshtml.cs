@@ -91,7 +91,7 @@ using System.IO;
             WriteLiteral("    <p>\r\n        ");
             EndContext();
             BeginContext(636, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93a08b15f6394ec9be624efcda4736ae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4421581c9dd4537bc0181adb07fb51f", async() => {
                 BeginContext(659, 5, true);
                 WriteLiteral("Dodaj");
                 EndContext();
@@ -160,12 +160,12 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
             WriteLiteral("                    <td>\r\n\r\n                        ");
             EndContext();
             BeginContext(1716, 797, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a08305b3a9442e399a5493f6c612434", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe219248a0a44f6aa94f0677b23d168a", async() => {
                 BeginContext(1768, 122, true);
                 WriteLiteral("\r\n                            <input type=\"submit\" value=\"Usuń\" class=\"btn btn-default\" /> |\r\n                            ");
                 EndContext();
                 BeginContext(1890, 94, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f937b869f661422c9e20980112dccba1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4ed9257c2804e00abe6000f2e36521a", async() => {
                     BeginContext(1973, 7, true);
                     WriteLiteral("Pobierz");
                     EndContext();
@@ -209,7 +209,7 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
 #line default
 #line hidden
                 BeginContext(2410, 59, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97009d47a4e24d82bf79b8c0a500060e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b7d954111de6494380e31d3474e63f9f", async() => {
                     BeginContext(2457, 8, true);
                     WriteLiteral("Wyświetl");
                     EndContext();
@@ -291,7 +291,7 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
             WriteLiteral("                    <td>\r\n                        ");
             EndContext();
             BeginContext(2656, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2ab321149a94eeea02f61a3a6945ae8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27a47a5f2757499b86ba31b0c3b41efb", async() => {
                 BeginContext(2704, 7, true);
                 WriteLiteral("Pobierz");
                 EndContext();
@@ -335,7 +335,7 @@ logged.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.C
 #line default
 #line hidden
             BeginContext(3044, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8863b329d5ed4bef9fbf69c79528a87a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "933ccfb347e549deba58177c0d3fec5a", async() => {
                 BeginContext(3091, 8, true);
                 WriteLiteral("Wyświetl");
                 EndContext();

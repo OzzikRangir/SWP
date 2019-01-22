@@ -99,6 +99,7 @@ namespace Swp.Controllers
             ViewData["Stopnie"] = new SelectList(Enumerations.StopnieSlownik, "Key", "Value", zolnierz.Stopien);
             ViewData["Idgrupy"] = new SelectList(_context.Grupa, "Idgrupy", "Idgrupy", zolnierz.Idgrupy);
             ViewData["Uzytkownicy"] = new SelectList(_context.Uzytkownik, "Iduzytkownika", "Login", zolnierz.Iduzytkownika);
+
             return View(zolnierz);
         }
 

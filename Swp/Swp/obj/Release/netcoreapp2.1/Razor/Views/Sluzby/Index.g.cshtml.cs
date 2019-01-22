@@ -68,7 +68,7 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n<h2>Ewidencja służb</h2>\r\n<p>\r\n    ");
             EndContext();
             BeginContext(217, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad23a2b97eaf4fa1be9851300239b390", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8cab1a20c92a487ea62b2ac67606023f", async() => {
                 BeginContext(240, 5, true);
                 WriteLiteral("Dodaj");
                 EndContext();
@@ -90,7 +90,7 @@ using Swp.TagHelpers;
             WriteLiteral("\r\n</p>\r\n\r\n<hr />\r\n");
             EndContext();
             BeginContext(267, 271, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("calendar", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5fbf0421491248948f40f38e6c5dc9ca", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("calendar", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1b30c9d45a394da0a8b6ad6a83d1fa3f", async() => {
             }
             );
             __Swp_TagHelpers_SluzbyTagHelper = CreateTagHelper<global::Swp.TagHelpers.SluzbyTagHelper>();
