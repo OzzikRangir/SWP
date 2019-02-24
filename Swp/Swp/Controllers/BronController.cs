@@ -26,6 +26,8 @@ namespace Swp.Controllers
         }
 
         // GET: Bron
+
+     
         public async Task<IActionResult> Index()
         {
             if (_context.Uzytkownik.Where(z => z.Iduzytkownika.ToString() == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value).Select(a => a.IdroliNavigation.Nazwa).FirstOrDefault() == "Administrator" ||
@@ -40,6 +42,7 @@ namespace Swp.Controllers
         }
 
         // GET: Bron/Details/5
+      
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)

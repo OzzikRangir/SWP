@@ -18,6 +18,7 @@ namespace Swp.Controllers
         {
             _context = context;
         }
+              
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             ViewData["Logged"] = _context.Uzytkownik.Include(a => a.IdroliNavigation);

@@ -3,7 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>05e17159-1023-41a4-82a4-c563e5c64309</UserSecretsId>
+    <StartupObject></StartupObject>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Student\Desktop\SWP\SWP\SWP\Swp\Swp\Swp.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\Services\**" />
+    <Content Remove="Areas\Identity\Services\**" />
+    <EmbeddedResource Remove="Areas\Identity\Services\**" />
+    <None Remove="Areas\Identity\Services\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Controllers\SluzbyController - bak.cs" />
@@ -22,10 +34,6 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Identity\Services\" />
   </ItemGroup>
 
   <ItemGroup>
